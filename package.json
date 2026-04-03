@@ -1,0 +1,26 @@
+{
+  "name": "govt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyamsk05/Govt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyamsk05/Govt/issues"
+  },
+  "homepage": "https://github.com/satyamsk05/Govt#readme",
+  "dependencies": {
+    "axios": "^1.14.0",
+    "cheerio": "^1.2.0",
+    "openai": "^6.33.0"
+  }
+}

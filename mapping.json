@@ -1,6 +1,10 @@
 {
   "Result": [
     {
+      "original_title": "Latest Jobs",
+      "local_path": "rollout/latest-jobs.html"
+    },
+    {
       "original_title": "BSSC WO, Lower Division Clerk Final Result",
       "local_path": "rollout/bssc-wo-lower-division-clerk-final-result.html"
     },
@@ -125,154 +129,134 @@
     {
       "original_title": "UPSSSC Stenographer 2024 Revised Answer Key",
       "local_path": "rollout/upsssc-stenographer-2024-revised-answer-key.html"
-    },
-    {
-      "original_title": "NTA UGC NET December 2024 E Certificate Download",
-      "local_path": "rollout/nta-ugc-net-december-2024-e-certificate-download.html"
-    },
-    {
-      "original_title": "MPPSC SET 2024 E Certificate",
-      "local_path": "rollout/mppsc-set-2024-e-certificate.html"
-    },
-    {
-      "original_title": "UPSSSC PET 2023 Certificate",
-      "local_path": "rollout/upsssc-pet-2023-certificate.html"
-    },
-    {
-      "original_title": "Voter ID Online Form 2024, E EPIC Download",
-      "local_path": "rollout/voter-id-online-form-2024-e-epic-download.html"
-    },
-    {
-      "original_title": "Aadhar Pan Card Link Online or Check Status 2023",
-      "local_path": "rollout/aadhar-pan-card-link-online-or-check-status-2023.html"
     }
   ],
-  "Certificate Verification": [
+  "Admit Card": [
     {
-      "original_title": "NTA UGC NET December 2024 E Certificate Download",
-      "local_path": "rollout/nta-ugc-net-december-2024-e-certificate-download.html"
+      "original_title": "Bihar BPSC AEDO Admit Card 2026",
+      "local_path": "rollout/bihar-bpsc-aedo-admit-card-2026.html"
     },
     {
-      "original_title": "MPPSC SET 2024 E Certificate",
-      "local_path": "rollout/mppsc-set-2024-e-certificate.html"
+      "original_title": "India Exim Bank Management Trainee Admit Card 2026",
+      "local_path": "rollout/india-exim-bank-management-trainee-admit-card-2026.html"
     },
     {
-      "original_title": "UPSSSC PET 2023 Certificate",
-      "local_path": "rollout/upsssc-pet-2023-certificate.html"
+      "original_title": "RPSC Sub Inspector SI Admit Card 2026",
+      "local_path": "rollout/rpsc-sub-inspector-si-admit-card-2026.html"
     },
     {
-      "original_title": "Voter ID Online Form 2024, E EPIC Download",
-      "local_path": "rollout/voter-id-online-form-2024-e-epic-download.html"
+      "original_title": "RBI Assistant Pre Admit Card 2026",
+      "local_path": "rollout/rbi-assistant-pre-admit-card-2026.html"
     },
     {
-      "original_title": "Aadhar Pan Card Link Online or Check Status 2023",
-      "local_path": "rollout/aadhar-pan-card-link-online-or-check-status-2023.html"
+      "original_title": "UPSC NDA I Admit Card 2026",
+      "local_path": "rollout/upsc-nda-i-admit-card-2026.html"
+    },
+    {
+      "original_title": "UPSC CDS I Admit Card 2026",
+      "local_path": "rollout/upsc-cds-i-admit-card-2026.html"
+    },
+    {
+      "original_title": "UPSSSC Pharmacist Exam Date 2026",
+      "local_path": "rollout/upsssc-pharmacist-exam-date-2026.html"
+    },
+    {
+      "original_title": "SSC CHSL 2025 Tier II Exam City",
+      "local_path": "rollout/ssc-chsl-2025-tier-ii-exam-city.html"
+    },
+    {
+      "original_title": "UPPSC Technical Education Principal 2025 Admit Card",
+      "local_path": "rollout/uppsc-technical-education-principal-2025-admit-card.html"
+    },
+    {
+      "original_title": "JPSC Pre 2026 New Exam Date",
+      "local_path": "rollout/jpsc-pre-2026-new-exam-date.html"
+    },
+    {
+      "original_title": "NTA JEEMAIN Session II Admit Card 2026",
+      "local_path": "rollout/nta-jeemain-session-ii-admit-card-2026.html"
+    },
+    {
+      "original_title": "SSC Junior Engineer JE 2025 Paper II Exam City Details",
+      "local_path": "rollout/ssc-junior-engineer-je-2025-paper-ii-exam-city-details.html"
+    },
+    {
+      "original_title": "UPPSC LT Grade Assistant Teacher (Computer) Admit Card 2026",
+      "local_path": "rollout/uppsc-lt-grade-assistant-teacher-computer-admit-card-2026.html"
+    },
+    {
+      "original_title": "MPESB MP Police Sub Inspector SI, Subedar 2nd Phase Exam Date 2026",
+      "local_path": "rollout/mpesb-mp-police-sub-inspector-si-subedar-2nd-phase-exam-date-2026.html"
+    },
+    {
+      "original_title": "Indian Airforce Airmen Medical Assistant Intake 01/2027 Exam City Details",
+      "local_path": "rollout/indian-airforce-airmen-medical-assistant-intake-012027-exam-city-details.html"
+    },
+    {
+      "original_title": "Indian Airforce Agniveer Intake 01/2027 Exam City Details",
+      "local_path": "rollout/indian-airforce-agniveer-intake-012027-exam-city-details.html"
+    },
+    {
+      "original_title": "SSC Delhi Police Head Constable AWO / TPO 2022 DME Exam Schedule",
+      "local_path": "rollout/ssc-delhi-police-head-constable-awo-tpo-2022-dme-exam-schedule.html"
+    },
+    {
+      "original_title": "CBSE KVS, NVS Teaching and Non Teaching Tier II Admit Card 2026",
+      "local_path": "rollout/cbse-kvs-nvs-teaching-and-non-teaching-tier-ii-admit-card-2026.html"
+    },
+    {
+      "original_title": "UP Police Computer Operator 2025 Exam Date",
+      "local_path": "rollout/up-police-computer-operator-2025-exam-date.html"
+    },
+    {
+      "original_title": "UP Police SI / ASI Confidential 2025 Exam Date",
+      "local_path": "rollout/up-police-si-asi-confidential-2025-exam-date.html"
+    },
+    {
+      "original_title": "UP Police Assistant Operator 2025 Exam Date",
+      "local_path": "rollout/up-police-assistant-operator-2025-exam-date.html"
+    },
+    {
+      "original_title": "UPSC Forest Services IFS 2025 Interview Schedule",
+      "local_path": "rollout/upsc-forest-services-ifs-2025-interview-schedule.html"
+    },
+    {
+      "original_title": "DRDO CEPTAM 11 Admit Card 2026",
+      "local_path": "rollout/drdo-ceptam-11-admit-card-2026.html"
+    },
+    {
+      "original_title": "NCERT Group A, B, C Admit Card 2026",
+      "local_path": "rollout/ncert-group-a-b-c-admit-card-2026.html"
+    },
+    {
+      "original_title": "NVS Class 6th Winter Bound Admit Card 2026",
+      "local_path": "rollout/nvs-class-6th-winter-bound-admit-card-2026.html"
+    },
+    {
+      "original_title": "Delhi DSSSB February to May 2026 Exam Admit Card",
+      "local_path": "rollout/delhi-dsssb-february-to-may-2026-exam-admit-card.html"
     }
   ],
-  "Latest Jobs": [
+  "Syllabus": [
     {
-      "original_title": "UPSRTC Bus Conductor Online Form 2026",
-      "local_path": "rollout/upsrtc-bus-conductor-online-form-2026.html"
+      "original_title": "MPESB Nursing Officer, Sister Tutor Syllabus 2026",
+      "local_path": "rollout/mpesb-nursing-officer-sister-tutor-syllabus-2026.html"
     },
     {
-      "original_title": "MPESB Nursing Officer, Sister Tutor Online Form 2026",
-      "local_path": "rollout/mpesb-nursing-officer-sister-tutor-online-form-2026.html"
+      "original_title": "Patna High Court Technical Assistant Syllabus 2026",
+      "local_path": "rollout/patna-high-court-technical-assistant-syllabus-2026.html"
     },
     {
-      "original_title": "UPPSC LT Grade Assistant Teacher Mains Online Form 2026",
-      "local_path": "rollout/uppsc-lt-grade-assistant-teacher-mains-online-form-2026.html"
+      "original_title": "Jharkhand Teacher Eligibility Test JHTET Syllabus 2026",
+      "local_path": "rollout/jharkhand-teacher-eligibility-test-jhtet-syllabus-2026.html"
     },
     {
-      "original_title": "UPSSSC Various Post Online Form 2026",
-      "local_path": "rollout/upsssc-various-post-online-form-2026.html"
+      "original_title": "UPTET 2026 Syllabus",
+      "local_path": "rollout/uptet-2026-syllabus.html"
     },
     {
-      "original_title": "Patna High Court Technical Assistant Online Form 2026",
-      "local_path": "rollout/patna-high-court-technical-assistant-online-form-2026.html"
-    },
-    {
-      "original_title": "UPSSSC Lower PCS Graduate Level Online Form 2026",
-      "local_path": "rollout/upsssc-lower-pcs-graduate-level-online-form-2026.html"
-    },
-    {
-      "original_title": "Indian Navy MR Musician 02/2026 Batch Online Form",
-      "local_path": "rollout/indian-navy-mr-musician-022026-batch-online-form.html"
-    },
-    {
-      "original_title": "Indian Army Agniveer Rally Recruitment Online Form 2026",
-      "local_path": "rollout/indian-army-agniveer-rally-recruitment-online-form-2026.html"
-    },
-    {
-      "original_title": "ITBP Constable Barber, Washerman Online Form 2026",
-      "local_path": "rollout/itbp-constable-barber-washerman-online-form-2026.html"
-    },
-    {
-      "original_title": "Jharkhand Teacher Eligibility Test JHTET Online Form 2026",
-      "local_path": "rollout/jharkhand-teacher-eligibility-test-jhtet-online-form-2026.html"
-    },
-    {
-      "original_title": "UPTET 2026 Online Form",
-      "local_path": "rollout/uptet-2026-online-form.html"
-    },
-    {
-      "original_title": "MPESB MP Police Sub Inspector SI, Subedar 2nd Phase Fee Payment",
-      "local_path": "rollout/mpesb-mp-police-sub-inspector-si-subedar-2nd-phase-fee-payment.html"
-    },
-    {
-      "original_title": "UPSSSC Technical Assistant Group C Online Form 2026",
-      "local_path": "rollout/upsssc-technical-assistant-group-c-online-form-2026.html"
-    },
-    {
-      "original_title": "UPCISB UP Cooperative Bank Various Post Online Form 2026",
-      "local_path": "rollout/upcisb-up-cooperative-bank-various-post-online-form-2026.html"
-    },
-    {
-      "original_title": "SSB Constable, HC, ASI, SI Online Form 2026",
-      "local_path": "rollout/ssb-constable-hc-asi-si-online-form-2026.html"
-    },
-    {
-      "original_title": "UPSSSC Assistant Statistical Officer ASO Online Form 2026",
-      "local_path": "rollout/upsssc-assistant-statistical-officer-aso-online-form-2026.html"
-    },
-    {
-      "original_title": "BPSC 33 Civil Judge PCS J Online Form 2026",
-      "local_path": "rollout/bpsc-33-civil-judge-pcs-j-online-form-2026.html"
-    },
-    {
-      "original_title": "UPPSC GIC Lecturer Edit / Modify Form 2026",
-      "local_path": "rollout/uppsc-gic-lecturer-edit-modify-form-2026.html"
-    },
-    {
-      "original_title": "UPSSSC Technical Assistant Group C 2024 Online Document Upload",
-      "local_path": "rollout/upsssc-technical-assistant-group-c-2024-online-document-upload.html"
-    },
-    {
-      "original_title": "MPESB Group 5 Various Post Online Form 2026",
-      "local_path": "rollout/mpesb-group-5-various-post-online-form-2026.html"
-    },
-    {
-      "original_title": "UPSSSC Assistant Boring Technician Online Form 2026",
-      "local_path": "rollout/upsssc-assistant-boring-technician-online-form-2026.html"
-    },
-    {
-      "original_title": "Railway RRB Assistant Loco Pilot ALP CEN 01/2026 Online Form",
-      "local_path": "rollout/railway-rrb-assistant-loco-pilot-alp-cen-012026-online-form.html"
-    },
-    {
-      "original_title": "UP Anganwadi Worker Online Form",
-      "local_path": "rollout/up-anganwadi-worker-online-form.html"
-    },
-    {
-      "original_title": "Indian Navy SSR Medical Online Form 2026",
-      "local_path": "rollout/indian-navy-ssr-medical-online-form-2026.html"
-    },
-    {
-      "original_title": "Indian Navy SSR / MR INET 2026 Online Form",
-      "local_path": "rollout/indian-navy-ssr-mr-inet-2026-online-form.html"
-    },
-    {
-      "original_title": "Railway RRC SCR Apprentices Online Form 2026",
-      "local_path": "rollout/railway-rrc-scr-apprentices-online-form-2026.html"
+      "original_title": "NTA NEET UG 2026 Syllabus",
+      "local_path": "rollout/nta-neet-ug-2026-syllabus.html"
     }
   ]
 }

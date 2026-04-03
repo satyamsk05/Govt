@@ -49,4 +49,75 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.remove('active');
         }
     });
+
+    // SEARCH FUNCTIONALITY
+    const searchBtn = document.querySelector('.search-btn');
+    if (searchBtn) {
+        const searchOverlay = document.createElement('div');
+        searchOverlay.className = 'search-overlay';
+        searchOverlay.innerHTML = `
+            <div class="search-modal">
+                <div class="search-header">
+                    <input type="text" id="searchInput" placeholder="Search Jobs, Results, Admit Cards..." autofocus>
+                    <button class="search-close">×</button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        `;
+        document.body.appendChild(searchOverlay);
+
+        const searchInput = searchOverlay.querySelector('#searchInput');
+        const searchResults = searchOverlay.querySelector('#searchResults');
+        const searchClose = searchOverlay.querySelector('.search-close');
+
+        let searchIndex = [];
+
+        const loadSearchIndex = async () => {
+            try {
+                const resp = await fetch('assets/js/search_index.json');
+                searchIndex = await resp.json();
+                console.log('Search Index Loaded');
+            } catch (e) {
+                console.error('Failed to load search index:', e);
+            }
+        };
+
+        searchBtn.addEventListener('click', () => {
+            searchOverlay.classList.add('visible');
+            searchInput.focus();
+            if (searchIndex.length === 0) loadSearchIndex();
+        });
+
+        const closeSearch = () => {
+            searchOverlay.classList.remove('visible');
+            searchInput.value = '';
+            searchResults.innerHTML = '';
+        };
+
+        searchClose.addEventListener('click', closeSearch);
+        searchOverlay.addEventListener('click', (e) => {
+            if (e.target === searchOverlay) closeSearch();
+        });
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            if (query.length < 2) {
+                searchResults.innerHTML = '';
+                return;
+            }
+
+            const filtered = searchIndex.filter(item => 
+                item.t.toLowerCase().includes(query) || 
+                item.c.toLowerCase().includes(query)
+            ).slice(0, 15);
+
+            searchResults.innerHTML = filtered.map(item => `
+                <a href="${item.u}" class="search-item">
+                    <span class="search-item-cat">${item.c}</span>
+                    <span class="search-item-title">${item.t}</span>
+                </a>
+            `).join('');
+        });
+    }
 });
+
