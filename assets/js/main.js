@@ -119,5 +119,62 @@ document.addEventListener('DOMContentLoaded', () => {
             `).join('');
         });
     }
+
+    // DARK MODE LOGIC
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const themeIcon = document.getElementById('themeIcon');
+
+    // Check for saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        if (themeIcon) themeIcon.innerHTML = `<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>`;
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            if (themeIcon) {
+                themeIcon.innerHTML = isDark 
+                    ? `<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>` 
+                    : `<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>`;
+            }
+        });
+    }
+
+    // SHARE LOGIC
+    const shareWA = document.getElementById('shareWA');
+    const shareTG = document.getElementById('shareTG');
+    const shareCopy = document.getElementById('shareCopy');
+
+    if (shareWA) {
+        shareWA.addEventListener('click', (e) => {
+            e.preventDefault();
+            const url = window.location.href;
+            const text = document.title;
+            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
+        });
+    }
+    if (shareTG) {
+        shareTG.addEventListener('click', (e) => {
+            e.preventDefault();
+            const url = window.location.href;
+            const text = document.title;
+            window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
+        });
+    }
+    if (shareCopy) {
+        shareCopy.addEventListener('click', (e) => {
+            e.preventDefault();
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const originalText = shareCopy.innerHTML;
+                shareCopy.innerHTML = '✅ Copied!';
+                setTimeout(() => { shareCopy.innerHTML = originalText; }, 2000);
+            });
+        });
+    }
 });
 

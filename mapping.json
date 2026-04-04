@@ -1,262 +1,696 @@
 {
   "Result": [
     {
-      "original_title": "Latest Jobs",
-      "local_path": "rollout/latest-jobs.html"
+      "title": "Latest Jobs",
+      "path": "rollout/latest-jobs.html",
+      "tags": {
+        "qual": [],
+        "state": []
+      }
     },
     {
-      "original_title": "BSSC WO, Lower Division Clerk Final Result",
-      "local_path": "rollout/bssc-wo-lower-division-clerk-final-result.html"
+      "title": "BSSC WO, Lower Division Clerk Final Result",
+      "path": "rollout/bssc-wo-lower-division-clerk-final-result.html",
+      "tags": {
+        "qual": [
+          "12th Pass"
+        ],
+        "state": [
+          "Bihar"
+        ]
+      }
     },
     {
-      "original_title": "Delhi DDS Multi Tasking Staff MTS 2025 Result",
-      "local_path": "rollout/delhi-dds-multi-tasking-staff-mts-2025-result.html"
+      "title": "Delhi DDS Multi Tasking Staff MTS 2025 Result",
+      "path": "rollout/delhi-dds-multi-tasking-staff-mts-2025-result.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Delhi"
+        ]
+      }
     },
     {
-      "original_title": "New India Assurance AO 2025 Final Result",
-      "local_path": "rollout/new-india-assurance-ao-2025-final-result.html"
+      "title": "New India Assurance AO 2025 Final Result",
+      "path": "rollout/new-india-assurance-ao-2025-final-result.html",
+      "tags": {
+        "qual": [],
+        "state": []
+      }
     },
     {
-      "original_title": "Bihar Cooperative Bank Assistant Marks / Score Card",
-      "local_path": "rollout/bihar-cooperative-bank-assistant-marks-score-card.html"
+      "title": "Bihar Cooperative Bank Assistant Marks / Score Card",
+      "path": "rollout/bihar-cooperative-bank-assistant-marks-score-card.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Bihar"
+        ]
+      }
     },
     {
-      "original_title": "DSSSB PGT Teacher Post Code 15/2024 Result",
-      "local_path": "rollout/dsssb-pgt-teacher-post-code-152024-result.html"
+      "title": "DSSSB PGT Teacher Post Code 15/2024 Result",
+      "path": "rollout/dsssb-pgt-teacher-post-code-152024-result.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Delhi"
+        ]
+      }
     },
     {
-      "original_title": "UPPSC LT Grade Assistant Teacher 2025 Social Science Result",
-      "local_path": "rollout/uppsc-lt-grade-assistant-teacher-2025-social-science-result.html"
+      "title": "UPPSC LT Grade Assistant Teacher 2025 Social Science Result",
+      "path": "rollout/uppsc-lt-grade-assistant-teacher-2025-social-science-result.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "UPSSSC Junior Engineer JE 2024 Eligibility Result",
-      "local_path": "rollout/upsssc-junior-engineer-je-2024-eligibility-result.html"
+      "title": "UPSSSC Junior Engineer JE 2024 Eligibility Result",
+      "path": "rollout/upsssc-junior-engineer-je-2024-eligibility-result.html",
+      "tags": {
+        "qual": [
+          "Graduate",
+          "ITI/Diploma"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "Rajasthan Board RBSE Class 12th Result 2026",
-      "local_path": "rollout/rajasthan-board-rbse-class-12th-result-2026.html"
+      "title": "Rajasthan Board RBSE Class 12th Result 2026",
+      "path": "rollout/rajasthan-board-rbse-class-12th-result-2026.html",
+      "tags": {
+        "qual": [
+          "12th Pass"
+        ],
+        "state": [
+          "Rajasthan"
+        ]
+      }
     },
     {
-      "original_title": "CTET February 2026 Result",
-      "local_path": "rollout/ctet-february-2026-result.html"
+      "title": "CTET February 2026 Result",
+      "path": "rollout/ctet-february-2026-result.html",
+      "tags": {
+        "qual": [],
+        "state": []
+      }
     },
     {
-      "original_title": "NABARD Development Assistant Pre Result 2026",
-      "local_path": "rollout/nabard-development-assistant-pre-result-2026.html"
+      "title": "NABARD Development Assistant Pre Result 2026",
+      "path": "rollout/nabard-development-assistant-pre-result-2026.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "UPSC CDS II 2025 Final Result",
-      "local_path": "rollout/upsc-cds-ii-2025-final-result.html"
+      "title": "UPSC CDS II 2025 Final Result",
+      "path": "rollout/upsc-cds-ii-2025-final-result.html",
+      "tags": {
+        "qual": [],
+        "state": []
+      }
     },
     {
-      "original_title": "SSC CPO SI 2025 Paper I Result",
-      "local_path": "rollout/ssc-cpo-si-2025-paper-i-result.html"
+      "title": "SSC CPO SI 2025 Paper I Result",
+      "path": "rollout/ssc-cpo-si-2025-paper-i-result.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": [
+          "Delhi"
+        ]
+      }
     },
     {
-      "original_title": "Patna High Court Mazdoor 2025 Score Card",
-      "local_path": "rollout/patna-high-court-mazdoor-2025-score-card.html"
+      "title": "Patna High Court Mazdoor 2025 Score Card",
+      "path": "rollout/patna-high-court-mazdoor-2025-score-card.html",
+      "tags": {
+        "qual": [
+          "12th Pass"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "UPPSC 2024 Final Result",
-      "local_path": "rollout/uppsc-2024-final-result.html"
+      "title": "UPPSC 2024 Final Result",
+      "path": "rollout/uppsc-2024-final-result.html",
+      "tags": {
+        "qual": [
+          "Graduate",
+          "ITI/Diploma"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "Bihar Board BSEB Class 10th Result 2026",
-      "local_path": "rollout/bihar-board-bseb-class-10th-result-2026.html"
+      "title": "Bihar Board BSEB Class 10th Result 2026",
+      "path": "rollout/bihar-board-bseb-class-10th-result-2026.html",
+      "tags": {
+        "qual": [
+          "10th Pass"
+        ],
+        "state": [
+          "Bihar"
+        ]
+      }
     },
     {
-      "original_title": "Bihar Board 10th Result 2026",
-      "local_path": "rollout/bihar-board-10th-result-2026.html"
+      "title": "Bihar Board 10th Result 2026",
+      "path": "rollout/bihar-board-10th-result-2026.html",
+      "tags": {
+        "qual": [
+          "10th Pass"
+        ],
+        "state": [
+          "Bihar"
+        ]
+      }
     },
     {
-      "original_title": "SSC Delhi Police Constable 2023 Reserve Panel List",
-      "local_path": "rollout/ssc-delhi-police-constable-2023-reserve-panel-list.html"
+      "title": "SSC Delhi Police Constable 2023 Reserve Panel List",
+      "path": "rollout/ssc-delhi-police-constable-2023-reserve-panel-list.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Delhi"
+        ]
+      }
     },
     {
-      "original_title": "Punjab National Bank PNB Apprentice Result 2026",
-      "local_path": "rollout/punjab-national-bank-pnb-apprentice-result-2026.html"
+      "title": "Punjab National Bank PNB Apprentice Result 2026",
+      "path": "rollout/punjab-national-bank-pnb-apprentice-result-2026.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "UP Police SI / ASI 2023 Final Result",
-      "local_path": "rollout/up-police-si-asi-2023-final-result.html"
+      "title": "UP Police SI / ASI 2023 Final Result",
+      "path": "rollout/up-police-si-asi-2023-final-result.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "CGPSC SSE Pre 2025 Result",
-      "local_path": "rollout/cgpsc-sse-pre-2025-result.html"
+      "title": "CGPSC SSE Pre 2025 Result",
+      "path": "rollout/cgpsc-sse-pre-2025-result.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "MP Class 5th, Class 8th Result 2026",
-      "local_path": "rollout/mp-class-5th-class-8th-result-2026.html"
+      "title": "MP Class 5th, Class 8th Result 2026",
+      "path": "rollout/mp-class-5th-class-8th-result-2026.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Madhya Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "Rajasthan Board RBSE Class 10th Result 2026",
-      "local_path": "rollout/rajasthan-board-rbse-class-10th-result-2026.html"
+      "title": "Rajasthan Board RBSE Class 10th Result 2026",
+      "path": "rollout/rajasthan-board-rbse-class-10th-result-2026.html",
+      "tags": {
+        "qual": [
+          "10th Pass"
+        ],
+        "state": [
+          "Rajasthan"
+        ]
+      }
     },
     {
-      "original_title": "Rajasthan Class 5th, 8th Result 2026",
-      "local_path": "rollout/rajasthan-class-5th-8th-result-2026.html"
+      "title": "Rajasthan Class 5th, 8th Result 2026",
+      "path": "rollout/rajasthan-class-5th-8th-result-2026.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Rajasthan"
+        ]
+      }
     },
     {
-      "original_title": "Delhi DSSSB PGT History 2023 Result",
-      "local_path": "rollout/delhi-dsssb-pgt-history-2023-result.html"
+      "title": "Delhi DSSSB PGT History 2023 Result",
+      "path": "rollout/delhi-dsssb-pgt-history-2023-result.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Delhi"
+        ]
+      }
     },
     {
-      "original_title": "SSC Junior Engineer JE 2025 Paper I Marks, Final Answer Key",
-      "local_path": "rollout/ssc-junior-engineer-je-2025-paper-i-marks-final-answer-key.html"
+      "title": "SSC Junior Engineer JE 2025 Paper I Marks, Final Answer Key",
+      "path": "rollout/ssc-junior-engineer-je-2025-paper-i-marks-final-answer-key.html",
+      "tags": {
+        "qual": [
+          "Graduate",
+          "ITI/Diploma"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "Bihar Board BSEB Class 12th Inter Result 2026",
-      "local_path": "rollout/bihar-board-bseb-class-12th-inter-result-2026.html"
+      "title": "Bihar Board BSEB Class 12th Inter Result 2026",
+      "path": "rollout/bihar-board-bseb-class-12th-inter-result-2026.html",
+      "tags": {
+        "qual": [
+          "12th Pass"
+        ],
+        "state": [
+          "Bihar"
+        ]
+      }
     },
     {
-      "original_title": "Rajasthan RRVUNL Technician, Operator, Plant Attendant Mains Result 2026",
-      "local_path": "rollout/rajasthan-rrvunl-technician-operator-plant-attendant-mains-result-2026.html"
+      "title": "Rajasthan RRVUNL Technician, Operator, Plant Attendant Mains Result 2026",
+      "path": "rollout/rajasthan-rrvunl-technician-operator-plant-attendant-mains-result-2026.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Rajasthan"
+        ]
+      }
     }
   ],
   "Answer Key": [
     {
-      "original_title": "Indian Airforce Group Y Airmen Medical Assistant Answer Key 2026",
-      "local_path": "rollout/indian-airforce-group-y-airmen-medical-assistant-answer-key-2026.html"
+      "title": "Indian Airforce Group Y Airmen Medical Assistant Answer Key 2026",
+      "path": "rollout/indian-airforce-group-y-airmen-medical-assistant-answer-key-2026.html",
+      "tags": {
+        "qual": [
+          "12th Pass",
+          "Graduate",
+          "ITI/Diploma"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "Indian Airforce Agniveervayu Intake 01/2027 Answer Key",
-      "local_path": "rollout/indian-airforce-agniveervayu-intake-012027-answer-key.html"
+      "title": "Indian Airforce Agniveervayu Intake 01/2027 Answer Key",
+      "path": "rollout/indian-airforce-agniveervayu-intake-012027-answer-key.html",
+      "tags": {
+        "qual": [
+          "12th Pass",
+          "ITI/Diploma"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "UPSSSC Stenographer 2023  Revised Answer Key",
-      "local_path": "rollout/upsssc-stenographer-2023-revised-answer-key.html"
+      "title": "UPSSSC Stenographer 2023  Revised Answer Key",
+      "path": "rollout/upsssc-stenographer-2023-revised-answer-key.html",
+      "tags": {
+        "qual": [
+          "12th Pass",
+          "Graduate"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "UPSSSC Stenographer 2024 Revised Answer Key",
-      "local_path": "rollout/upsssc-stenographer-2024-revised-answer-key.html"
+      "title": "UPSSSC Stenographer 2024 Revised Answer Key",
+      "path": "rollout/upsssc-stenographer-2024-revised-answer-key.html",
+      "tags": {
+        "qual": [
+          "12th Pass"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     }
   ],
   "Admit Card": [
     {
-      "original_title": "Bihar BPSC AEDO Admit Card 2026",
-      "local_path": "rollout/bihar-bpsc-aedo-admit-card-2026.html"
+      "title": "Bihar BPSC AEDO Admit Card 2026",
+      "path": "rollout/bihar-bpsc-aedo-admit-card-2026.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": [
+          "Bihar"
+        ]
+      }
     },
     {
-      "original_title": "India Exim Bank Management Trainee Admit Card 2026",
-      "local_path": "rollout/india-exim-bank-management-trainee-admit-card-2026.html"
+      "title": "India Exim Bank Management Trainee Admit Card 2026",
+      "path": "rollout/india-exim-bank-management-trainee-admit-card-2026.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "RPSC Sub Inspector SI Admit Card 2026",
-      "local_path": "rollout/rpsc-sub-inspector-si-admit-card-2026.html"
+      "title": "RPSC Sub Inspector SI Admit Card 2026",
+      "path": "rollout/rpsc-sub-inspector-si-admit-card-2026.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": [
+          "Rajasthan"
+        ]
+      }
     },
     {
-      "original_title": "RBI Assistant Pre Admit Card 2026",
-      "local_path": "rollout/rbi-assistant-pre-admit-card-2026.html"
+      "title": "RBI Assistant Pre Admit Card 2026",
+      "path": "rollout/rbi-assistant-pre-admit-card-2026.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "UPSC NDA I Admit Card 2026",
-      "local_path": "rollout/upsc-nda-i-admit-card-2026.html"
+      "title": "UPSC NDA I Admit Card 2026",
+      "path": "rollout/upsc-nda-i-admit-card-2026.html",
+      "tags": {
+        "qual": [
+          "12th Pass"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "UPSC CDS I Admit Card 2026",
-      "local_path": "rollout/upsc-cds-i-admit-card-2026.html"
+      "title": "UPSC CDS I Admit Card 2026",
+      "path": "rollout/upsc-cds-i-admit-card-2026.html",
+      "tags": {
+        "qual": [
+          "12th Pass",
+          "Graduate"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "UPSSSC Pharmacist Exam Date 2026",
-      "local_path": "rollout/upsssc-pharmacist-exam-date-2026.html"
+      "title": "UPSSSC Pharmacist Exam Date 2026",
+      "path": "rollout/upsssc-pharmacist-exam-date-2026.html",
+      "tags": {
+        "qual": [
+          "ITI/Diploma"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "SSC CHSL 2025 Tier II Exam City",
-      "local_path": "rollout/ssc-chsl-2025-tier-ii-exam-city.html"
+      "title": "SSC CHSL 2025 Tier II Exam City",
+      "path": "rollout/ssc-chsl-2025-tier-ii-exam-city.html",
+      "tags": {
+        "qual": [
+          "12th Pass"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "UPPSC Technical Education Principal 2025 Admit Card",
-      "local_path": "rollout/uppsc-technical-education-principal-2025-admit-card.html"
+      "title": "UPPSC Technical Education Principal 2025 Admit Card",
+      "path": "rollout/uppsc-technical-education-principal-2025-admit-card.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "JPSC Pre 2026 New Exam Date",
-      "local_path": "rollout/jpsc-pre-2026-new-exam-date.html"
+      "title": "JPSC Pre 2026 New Exam Date",
+      "path": "rollout/jpsc-pre-2026-new-exam-date.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "NTA JEEMAIN Session II Admit Card 2026",
-      "local_path": "rollout/nta-jeemain-session-ii-admit-card-2026.html"
+      "title": "NTA JEEMAIN Session II Admit Card 2026",
+      "path": "rollout/nta-jeemain-session-ii-admit-card-2026.html",
+      "tags": {
+        "qual": [
+          "12th Pass",
+          "Graduate"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "SSC Junior Engineer JE 2025 Paper II Exam City Details",
-      "local_path": "rollout/ssc-junior-engineer-je-2025-paper-ii-exam-city-details.html"
+      "title": "SSC Junior Engineer JE 2025 Paper II Exam City Details",
+      "path": "rollout/ssc-junior-engineer-je-2025-paper-ii-exam-city-details.html",
+      "tags": {
+        "qual": [
+          "Graduate",
+          "ITI/Diploma"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "UPPSC LT Grade Assistant Teacher (Computer) Admit Card 2026",
-      "local_path": "rollout/uppsc-lt-grade-assistant-teacher-computer-admit-card-2026.html"
+      "title": "UPPSC LT Grade Assistant Teacher (Computer) Admit Card 2026",
+      "path": "rollout/uppsc-lt-grade-assistant-teacher-computer-admit-card-2026.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "MPESB MP Police Sub Inspector SI, Subedar 2nd Phase Exam Date 2026",
-      "local_path": "rollout/mpesb-mp-police-sub-inspector-si-subedar-2nd-phase-exam-date-2026.html"
+      "title": "MPESB MP Police Sub Inspector SI, Subedar 2nd Phase Exam Date 2026",
+      "path": "rollout/mpesb-mp-police-sub-inspector-si-subedar-2nd-phase-exam-date-2026.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": [
+          "Madhya Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "Indian Airforce Airmen Medical Assistant Intake 01/2027 Exam City Details",
-      "local_path": "rollout/indian-airforce-airmen-medical-assistant-intake-012027-exam-city-details.html"
+      "title": "Indian Airforce Airmen Medical Assistant Intake 01/2027 Exam City Details",
+      "path": "rollout/indian-airforce-airmen-medical-assistant-intake-012027-exam-city-details.html",
+      "tags": {
+        "qual": [
+          "12th Pass",
+          "Graduate",
+          "ITI/Diploma"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "Indian Airforce Agniveer Intake 01/2027 Exam City Details",
-      "local_path": "rollout/indian-airforce-agniveer-intake-012027-exam-city-details.html"
+      "title": "Indian Airforce Agniveer Intake 01/2027 Exam City Details",
+      "path": "rollout/indian-airforce-agniveer-intake-012027-exam-city-details.html",
+      "tags": {
+        "qual": [
+          "12th Pass",
+          "ITI/Diploma"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "SSC Delhi Police Head Constable AWO / TPO 2022 DME Exam Schedule",
-      "local_path": "rollout/ssc-delhi-police-head-constable-awo-tpo-2022-dme-exam-schedule.html"
+      "title": "SSC Delhi Police Head Constable AWO / TPO 2022 DME Exam Schedule",
+      "path": "rollout/ssc-delhi-police-head-constable-awo-tpo-2022-dme-exam-schedule.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Delhi"
+        ]
+      }
     },
     {
-      "original_title": "CBSE KVS, NVS Teaching and Non Teaching Tier II Admit Card 2026",
-      "local_path": "rollout/cbse-kvs-nvs-teaching-and-non-teaching-tier-ii-admit-card-2026.html"
+      "title": "CBSE KVS, NVS Teaching and Non Teaching Tier II Admit Card 2026",
+      "path": "rollout/cbse-kvs-nvs-teaching-and-non-teaching-tier-ii-admit-card-2026.html",
+      "tags": {
+        "qual": [
+          "ITI/Diploma"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "UP Police Computer Operator 2025 Exam Date",
-      "local_path": "rollout/up-police-computer-operator-2025-exam-date.html"
+      "title": "UP Police Computer Operator 2025 Exam Date",
+      "path": "rollout/up-police-computer-operator-2025-exam-date.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "UP Police SI / ASI Confidential 2025 Exam Date",
-      "local_path": "rollout/up-police-si-asi-confidential-2025-exam-date.html"
+      "title": "UP Police SI / ASI Confidential 2025 Exam Date",
+      "path": "rollout/up-police-si-asi-confidential-2025-exam-date.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "UP Police Assistant Operator 2025 Exam Date",
-      "local_path": "rollout/up-police-assistant-operator-2025-exam-date.html"
+      "title": "UP Police Assistant Operator 2025 Exam Date",
+      "path": "rollout/up-police-assistant-operator-2025-exam-date.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "UPSC Forest Services IFS 2025 Interview Schedule",
-      "local_path": "rollout/upsc-forest-services-ifs-2025-interview-schedule.html"
+      "title": "UPSC Forest Services IFS 2025 Interview Schedule",
+      "path": "rollout/upsc-forest-services-ifs-2025-interview-schedule.html",
+      "tags": {
+        "qual": [
+          "Graduate"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "DRDO CEPTAM 11 Admit Card 2026",
-      "local_path": "rollout/drdo-ceptam-11-admit-card-2026.html"
+      "title": "DRDO CEPTAM 11 Admit Card 2026",
+      "path": "rollout/drdo-ceptam-11-admit-card-2026.html",
+      "tags": {
+        "qual": [
+          "10th Pass",
+          "Graduate",
+          "ITI/Diploma"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "NCERT Group A, B, C Admit Card 2026",
-      "local_path": "rollout/ncert-group-a-b-c-admit-card-2026.html"
+      "title": "NCERT Group A, B, C Admit Card 2026",
+      "path": "rollout/ncert-group-a-b-c-admit-card-2026.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "NVS Class 6th Winter Bound Admit Card 2026",
-      "local_path": "rollout/nvs-class-6th-winter-bound-admit-card-2026.html"
+      "title": "NVS Class 6th Winter Bound Admit Card 2026",
+      "path": "rollout/nvs-class-6th-winter-bound-admit-card-2026.html",
+      "tags": {
+        "qual": [
+          "12th Pass"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "Delhi DSSSB February to May 2026 Exam Admit Card",
-      "local_path": "rollout/delhi-dsssb-february-to-may-2026-exam-admit-card.html"
+      "title": "Delhi DSSSB February to May 2026 Exam Admit Card",
+      "path": "rollout/delhi-dsssb-february-to-may-2026-exam-admit-card.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Delhi"
+        ]
+      }
     }
   ],
   "Syllabus": [
     {
-      "original_title": "MPESB Nursing Officer, Sister Tutor Syllabus 2026",
-      "local_path": "rollout/mpesb-nursing-officer-sister-tutor-syllabus-2026.html"
+      "title": "MPESB Nursing Officer, Sister Tutor Syllabus 2026",
+      "path": "rollout/mpesb-nursing-officer-sister-tutor-syllabus-2026.html",
+      "tags": {
+        "qual": [
+          "12th Pass",
+          "Graduate"
+        ],
+        "state": [
+          "Madhya Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "Patna High Court Technical Assistant Syllabus 2026",
-      "local_path": "rollout/patna-high-court-technical-assistant-syllabus-2026.html"
+      "title": "Patna High Court Technical Assistant Syllabus 2026",
+      "path": "rollout/patna-high-court-technical-assistant-syllabus-2026.html",
+      "tags": {
+        "qual": [
+          "ITI/Diploma"
+        ],
+        "state": []
+      }
     },
     {
-      "original_title": "Jharkhand Teacher Eligibility Test JHTET Syllabus 2026",
-      "local_path": "rollout/jharkhand-teacher-eligibility-test-jhtet-syllabus-2026.html"
+      "title": "Jharkhand Teacher Eligibility Test JHTET Syllabus 2026",
+      "path": "rollout/jharkhand-teacher-eligibility-test-jhtet-syllabus-2026.html",
+      "tags": {
+        "qual": [],
+        "state": []
+      }
     },
     {
-      "original_title": "UPTET 2026 Syllabus",
-      "local_path": "rollout/uptet-2026-syllabus.html"
+      "title": "UPTET 2026 Syllabus",
+      "path": "rollout/uptet-2026-syllabus.html",
+      "tags": {
+        "qual": [],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     },
     {
-      "original_title": "NTA NEET UG 2026 Syllabus",
-      "local_path": "rollout/nta-neet-ug-2026-syllabus.html"
+      "title": "NTA NEET UG 2026 Syllabus",
+      "path": "rollout/nta-neet-ug-2026-syllabus.html",
+      "tags": {
+        "qual": [
+          "12th Pass"
+        ],
+        "state": [
+          "Uttar Pradesh"
+        ]
+      }
     }
   ]
 }
