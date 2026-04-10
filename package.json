@@ -7,10 +7,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "add-job": "node scripts/add_job.mjs",
+    "sync": "node scripts/sync_categories.mjs",
+    "search-index": "node scripts/generate_search_index.mjs",
     "scrape": "python3 scraper/fetcher.py",
     "scrape:setup": "bash scraper/setup.sh",
     "admin": "node admin/server.mjs",
-    "dev": "npm run scrape && node scripts/sync_categories.mjs"
+    "dev": "npm run sync && npm run search-index",
+    "full-sync": "npm run sync && npm run search-index"
   },
   "repository": {
     "type": "git",

@@ -3,5 +3,8 @@ venv/
 .DS_Store
 *.log
 data/db.json
+data/all_posts.json.bak
 jobs_backup/
 public/jobs.json
+*.bak
+.env

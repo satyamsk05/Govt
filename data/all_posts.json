@@ -1,15 +1,9 @@
 {
   "Result": [
     {
-      "title": "UPSC CDS-II Revision Final Result 2026",
-      "url": "jobs/upsc-cds-ii-revision-final-result-2026.html",
-      "slug": "upsc-cds-ii-revision-final-result-2026",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "AAI Junior Executive ATC Final Result 2026",
-      "url": "jobs/aai-junior-executive-atc-final-result-2026-out.html",
-      "slug": "aai-junior-executive-atc-final-result-2026-out",
+      "title": "Result",
+      "url": "jobs/.html",
+      "slug": "",
       "date": "10/04/2026"
     },
     {
@@ -25,15 +19,15 @@
       "date": "10/04/2026"
     },
     {
-      "title": "Result",
-      "url": "jobs/.html",
-      "slug": "",
+      "title": "AAI Junior Executive ATC Final Result 2026",
+      "url": "jobs/aai-junior-executive-atc-final-result-2026-out.html",
+      "slug": "aai-junior-executive-atc-final-result-2026-out",
       "date": "10/04/2026"
     },
     {
-      "title": "NBE GPAT Result 2026",
-      "url": "jobs/nbe-gpat-result-2026-out.html",
-      "slug": "nbe-gpat-result-2026-out",
+      "title": "UPSC CDS-II Revision Final Result 2026",
+      "url": "jobs/upsc-cds-ii-revision-final-result-2026.html",
+      "slug": "upsc-cds-ii-revision-final-result-2026",
       "date": "10/04/2026"
     },
     {
@@ -43,9 +37,15 @@
       "date": "10/04/2026"
     },
     {
-      "title": "Delhi DDA JSA Final Result 2026",
-      "url": "jobs/delhi-dda-jsa-final-result-2026-out.html",
-      "slug": "delhi-dda-jsa-final-result-2026-out",
+      "title": "Bihar JEEVIKA Result / Cutoff 2026",
+      "url": "jobs/bihar-jeevika-result-2026-out.html",
+      "slug": "bihar-jeevika-result-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "NBE GPAT Result 2026",
+      "url": "jobs/nbe-gpat-result-2026-out.html",
+      "slug": "nbe-gpat-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -55,27 +55,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "Bihar JEEVIKA Result / Cutoff 2026",
-      "url": "jobs/bihar-jeevika-result-2026-out.html",
-      "slug": "bihar-jeevika-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "DSSSB Various Post Result 2026",
-      "url": "jobs/dsssb-various-post-result-2026-out.html",
-      "slug": "dsssb-various-post-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "Bihar Co-operative Bank Assistant Score Card 2026",
-      "url": "jobs/bihar-co-operative-bank-assistant-score-card-2026.html",
-      "slug": "bihar-co-operative-bank-assistant-score-card-2026",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "BSSC LDC & Welfare Organiser Final Result 2026",
-      "url": "jobs/bssc-ldc-welfare-organiser-final-result-2026-out.html",
-      "slug": "bssc-ldc-welfare-organiser-final-result-2026-out",
+      "title": "Delhi DDA JSA Final Result 2026",
+      "url": "jobs/delhi-dda-jsa-final-result-2026-out.html",
+      "slug": "delhi-dda-jsa-final-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -85,15 +67,27 @@
       "date": "10/04/2026"
     },
     {
+      "title": "Bihar Co-operative Bank Assistant Score Card 2026",
+      "url": "jobs/bihar-co-operative-bank-assistant-score-card-2026.html",
+      "slug": "bihar-co-operative-bank-assistant-score-card-2026",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "DSSSB Various Post Result 2026",
+      "url": "jobs/dsssb-various-post-result-2026-out.html",
+      "slug": "dsssb-various-post-result-2026-out",
+      "date": "10/04/2026"
+    },
+    {
       "title": "Airforce Group Y/ Medical Assistant Airmen Intake 01/2027 Answer Key",
       "url": "jobs/airforce-group-y-medical-assistant-airmen-intake-012027-answer-key-out.html",
       "slug": "airforce-group-y-medical-assistant-airmen-intake-012027-answer-key-out",
       "date": "10/04/2026"
     },
     {
-      "title": "Rajasthan Board 12th Result 2026",
-      "url": "jobs/rajasthan-board-12th-result-2026-declared.html",
-      "slug": "rajasthan-board-12th-result-2026-declared",
+      "title": "BSSC LDC & Welfare Organiser Final Result 2026",
+      "url": "jobs/bssc-ldc-welfare-organiser-final-result-2026-out.html",
+      "slug": "bssc-ldc-welfare-organiser-final-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -118,6 +112,12 @@
       "title": "CCRAS Group A B C Result 2026",
       "url": "jobs/ccras-group-a-b-c-result-2026.html",
       "slug": "ccras-group-a-b-c-result-2026",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "Rajasthan Board 12th Result 2026",
+      "url": "jobs/rajasthan-board-12th-result-2026-declared.html",
+      "slug": "rajasthan-board-12th-result-2026-declared",
       "date": "10/04/2026"
     },
     {
@@ -151,6 +151,12 @@
       "date": "10/04/2026"
     },
     {
+      "title": "UP Police SI Answer Key 2026",
+      "url": "jobs/up-police-si-answer-key-2026-out.html",
+      "slug": "up-police-si-answer-key-2026-out",
+      "date": "10/04/2026"
+    },
+    {
       "title": "Rajasthan Board 10th Result 2026",
       "url": "jobs/rajasthan-board-10th-result-2026-declared.html",
       "slug": "rajasthan-board-10th-result-2026-declared",
@@ -169,15 +175,21 @@
       "date": "10/04/2026"
     },
     {
-      "title": "UP Police SI Answer Key 2026",
-      "url": "jobs/up-police-si-answer-key-2026-out.html",
-      "slug": "up-police-si-answer-key-2026-out",
-      "date": "10/04/2026"
-    },
-    {
       "title": "CGPSC SSE PCS Pre Result 2026",
       "url": "jobs/cgpsc-sse-pcs-pre-result-2026-out.html",
       "slug": "cgpsc-sse-pcs-pre-result-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "RRB ALP Answer Key 2026",
+      "url": "jobs/rrb-alp-answer-key-2026-out.html",
+      "slug": "rrb-alp-answer-key-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "ECGC PO Final Result 2026",
+      "url": "jobs/ecgc-po-final-result-2026-out.html",
+      "slug": "ecgc-po-final-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -193,33 +205,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "RRB ALP Answer Key 2026",
-      "url": "jobs/rrb-alp-answer-key-2026-out.html",
-      "slug": "rrb-alp-answer-key-2026-out",
-      "date": "10/04/2026"
-    },
-    {
       "title": "RRVUNL Technician Various Post Mains Result 2026",
       "url": "jobs/rrvunl-technician-various-post-mains-result-2026-out.html",
       "slug": "rrvunl-technician-various-post-mains-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "ECGC PO Final Result 2026",
-      "url": "jobs/ecgc-po-final-result-2026-out.html",
-      "slug": "ecgc-po-final-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "IIT JAM Result 2026",
-      "url": "jobs/iit-jam-result-2026-out.html",
-      "slug": "iit-jam-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "Bihar Police BPSSC SI Pre Result 2026",
-      "url": "jobs/bihar-police-bpssc-si-pre-result-2026-out.html",
-      "slug": "bihar-police-bpssc-si-pre-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -229,27 +217,27 @@
       "date": "10/04/2026"
     },
     {
-      "title": "IIT GATE Result 2026",
-      "url": "jobs/iit-gate-result-2026.html",
-      "slug": "iit-gate-result-2026",
-      "date": "10/04/2026"
-    },
-    {
       "title": "UPPSC Computer Assistant Result 2026",
       "url": "jobs/uppsc-computer-assistant-result-2026-out.html",
       "slug": "uppsc-computer-assistant-result-2026-out",
       "date": "10/04/2026"
     },
     {
-      "title": "BPSSC Bihar Police Enforcement SI Final Result 2026",
-      "url": "jobs/bpssc-bihar-police-enforcement-si-final-result-2026-out.html",
-      "slug": "bpssc-bihar-police-enforcement-si-final-result-2026-out",
+      "title": "Bihar Police BPSSC SI Pre Result 2026",
+      "url": "jobs/bihar-police-bpssc-si-pre-result-2026-out.html",
+      "slug": "bihar-police-bpssc-si-pre-result-2026-out",
       "date": "10/04/2026"
     },
     {
-      "title": "SBI Bank Clerk Mains Score Card 2026",
-      "url": "jobs/sbi-bank-clerk-mains-score-card-2026-out.html",
-      "slug": "sbi-bank-clerk-mains-score-card-2026-out",
+      "title": "IIT GATE Result 2026",
+      "url": "jobs/iit-gate-result-2026.html",
+      "slug": "iit-gate-result-2026",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "IIT JAM Result 2026",
+      "url": "jobs/iit-jam-result-2026-out.html",
+      "slug": "iit-jam-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -259,9 +247,15 @@
       "date": "10/04/2026"
     },
     {
-      "title": "AFCAT 01/2026 Batch Result",
-      "url": "jobs/afcat-012026-batch-result-out.html",
-      "slug": "afcat-012026-batch-result-out",
+      "title": "SBI Bank Clerk Mains Score Card 2026",
+      "url": "jobs/sbi-bank-clerk-mains-score-card-2026-out.html",
+      "slug": "sbi-bank-clerk-mains-score-card-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "BPSSC Bihar Police Enforcement SI Final Result 2026",
+      "url": "jobs/bpssc-bihar-police-enforcement-si-final-result-2026-out.html",
+      "slug": "bpssc-bihar-police-enforcement-si-final-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -271,15 +265,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "IB ACIO Gr-II Executive Tier-II Result 2026",
-      "url": "jobs/ib-acio-gr-ii-executive-tier-ii-result-2026.html",
-      "slug": "ib-acio-gr-ii-executive-tier-ii-result-2026",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "India Post GDS 1st Merit List 2026",
-      "url": "jobs/india-post-gds-1st-merit-list-2026.html",
-      "slug": "india-post-gds-1st-merit-list-2026",
+      "title": "AFCAT 01/2026 Batch Result",
+      "url": "jobs/afcat-012026-batch-result-out.html",
+      "slug": "afcat-012026-batch-result-out",
       "date": "10/04/2026"
     },
     {
@@ -289,27 +277,33 @@
       "date": "10/04/2026"
     },
     {
-      "title": "SSC MTS / Havaldar Answer Key 2026",
-      "url": "jobs/ssc-mts-havaldar-answer-key-2026.html",
-      "slug": "ssc-mts-havaldar-answer-key-2026",
-      "date": "10/04/2026"
-    },
-    {
       "title": "RRB Junior Engineer JE Answer Key 2026",
       "url": "jobs/rrb-junior-engineer-je-answer-key-2026.html",
       "slug": "rrb-junior-engineer-je-answer-key-2026",
       "date": "10/04/2026"
     },
     {
-      "title": "UPSC Engineering Services Pre Result 2026",
-      "url": "jobs/upsc-engineering-services-pre-result-2026.html",
-      "slug": "upsc-engineering-services-pre-result-2026",
+      "title": "SSC MTS / Havaldar Answer Key 2026",
+      "url": "jobs/ssc-mts-havaldar-answer-key-2026.html",
+      "slug": "ssc-mts-havaldar-answer-key-2026",
       "date": "10/04/2026"
     },
     {
-      "title": "MPESB Primary School Teacher PSTST Result 2026",
-      "url": "jobs/mpesb-primary-school-teacher-pstst-result-2026.html",
-      "slug": "mpesb-primary-school-teacher-pstst-result-2026",
+      "title": "India Post GDS 1st Merit List 2026",
+      "url": "jobs/india-post-gds-1st-merit-list-2026.html",
+      "slug": "india-post-gds-1st-merit-list-2026",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "IB ACIO Gr-II Executive Tier-II Result 2026",
+      "url": "jobs/ib-acio-gr-ii-executive-tier-ii-result-2026.html",
+      "slug": "ib-acio-gr-ii-executive-tier-ii-result-2026",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "UPSC Engineering Services Pre Result 2026",
+      "url": "jobs/upsc-engineering-services-pre-result-2026.html",
+      "slug": "upsc-engineering-services-pre-result-2026",
       "date": "10/04/2026"
     },
     {
@@ -325,27 +319,15 @@
       "date": "10/04/2026"
     },
     {
+      "title": "MPESB Primary School Teacher PSTST Result 2026",
+      "url": "jobs/mpesb-primary-school-teacher-pstst-result-2026.html",
+      "slug": "mpesb-primary-school-teacher-pstst-result-2026",
+      "date": "10/04/2026"
+    },
+    {
       "title": "IBPS Clerk CSA XV Mains Result 2026",
       "url": "jobs/ibps-clerk-csa-xv-mains-result-2026.html",
       "slug": "ibps-clerk-csa-xv-mains-result-2026",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "UPSSSC Assistant Store Keeper Typing Test Result 2026",
-      "url": "jobs/upsssc-assistant-store-keeper-typing-test-result-2026.html",
-      "slug": "upsssc-assistant-store-keeper-typing-test-result-2026",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "RRB Section Controller Answer Key 2026",
-      "url": "jobs/rrb-section-controller-answer-key-2026.html",
-      "slug": "rrb-section-controller-answer-key-2026",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "RPSC Assistant Statistical Officer ASO Result 2026",
-      "url": "jobs/rpsc-assistant-statistical-officer-aso-result-2026-out.html",
-      "slug": "rpsc-assistant-statistical-officer-aso-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -361,21 +343,27 @@
       "date": "10/04/2026"
     },
     {
+      "title": "UPSSSC Assistant Store Keeper Typing Test Result 2026",
+      "url": "jobs/upsssc-assistant-store-keeper-typing-test-result-2026.html",
+      "slug": "upsssc-assistant-store-keeper-typing-test-result-2026",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "RPSC Assistant Statistical Officer ASO Result 2026",
+      "url": "jobs/rpsc-assistant-statistical-officer-aso-result-2026-out.html",
+      "slug": "rpsc-assistant-statistical-officer-aso-result-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "RRB Section Controller Answer Key 2026",
+      "url": "jobs/rrb-section-controller-answer-key-2026.html",
+      "slug": "rrb-section-controller-answer-key-2026",
+      "date": "10/04/2026"
+    },
+    {
       "title": "RBI Grade B Phase-II Result 2026",
       "url": "jobs/rbi-grade-b-phase-ii-result-2026-updated.html",
       "slug": "rbi-grade-b-phase-ii-result-2026-updated",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "NTA CMAT Result 2026",
-      "url": "jobs/nta-cmat-result-2026-out.html",
-      "slug": "nta-cmat-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "Nainital Bank Clerk CSA, PO & SO Final Result 2026",
-      "url": "jobs/nainital-bank-clerk-csa-po-so-final-result-2026-out.html",
-      "slug": "nainital-bank-clerk-csa-po-so-final-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -385,21 +373,21 @@
       "date": "10/04/2026"
     },
     {
+      "title": "Nainital Bank Clerk CSA, PO & SO Final Result 2026",
+      "url": "jobs/nainital-bank-clerk-csa-po-so-final-result-2026-out.html",
+      "slug": "nainital-bank-clerk-csa-po-so-final-result-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "NTA CMAT Result 2026",
+      "url": "jobs/nta-cmat-result-2026-out.html",
+      "slug": "nta-cmat-result-2026-out",
+      "date": "10/04/2026"
+    },
+    {
       "title": "Railway RPF Constable Final Result 2026",
       "url": "jobs/railway-rpf-constable-final-result-2026-updated.html",
       "slug": "railway-rpf-constable-final-result-2026-updated",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "BPSC LDC Typing Test Result 2026",
-      "url": "jobs/bpsc-ldc-typing-test-result-2026-out.html",
-      "slug": "bpsc-ldc-typing-test-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "RSSB NHM & RajMES Final Result 2026",
-      "url": "jobs/rssb-nhm-rajmes-final-result-2026-out.html",
-      "slug": "rssb-nhm-rajmes-final-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -409,15 +397,27 @@
       "date": "10/04/2026"
     },
     {
-      "title": "RSSB Jamadar Grade-II Result 2026",
-      "url": "jobs/rssb-jamadar-grade-ii-result-2026-out.html",
-      "slug": "rssb-jamadar-grade-ii-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
       "title": "SSC Constable GD Final Marks 2026",
       "url": "jobs/ssc-constable-gd-2025-final-marks-out.html",
       "slug": "ssc-constable-gd-2025-final-marks-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "RSSB NHM & RajMES Final Result 2026",
+      "url": "jobs/rssb-nhm-rajmes-final-result-2026-out.html",
+      "slug": "rssb-nhm-rajmes-final-result-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "BPSC LDC Typing Test Result 2026",
+      "url": "jobs/bpsc-ldc-typing-test-result-2026-out.html",
+      "slug": "bpsc-ldc-typing-test-result-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "RSSB Jamadar Grade-II Result 2026",
+      "url": "jobs/rssb-jamadar-grade-ii-result-2026-out.html",
+      "slug": "rssb-jamadar-grade-ii-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -427,9 +427,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "SBI Bank Clerk 3rd Wait List 2026",
-      "url": "jobs/sbi-bank-clerk-3rd-wait-list-2026-out.html",
-      "slug": "sbi-bank-clerk-3rd-wait-list-2026-out",
+      "title": "RSSB VDO Score Card 2026",
+      "url": "jobs/rssb-vdo-score-card-2026-out.html",
+      "slug": "rssb-vdo-score-card-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -439,9 +439,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "RSSB VDO Score Card 2026",
-      "url": "jobs/rssb-vdo-score-card-2026-out.html",
-      "slug": "rssb-vdo-score-card-2026-out",
+      "title": "SBI Bank Clerk 3rd Wait List 2026",
+      "url": "jobs/sbi-bank-clerk-3rd-wait-list-2026-out.html",
+      "slug": "sbi-bank-clerk-3rd-wait-list-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -451,15 +451,15 @@
       "date": "10/04/2026"
     },
     {
-      "title": "ISRO ICRB Scientist / Engineer Result 2026",
-      "url": "jobs/isro-icrb-scientist-engineer-result-2026-out.html",
-      "slug": "isro-icrb-scientist-engineer-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
       "title": "BELTRON Programmer Result / Cutoff 2026",
       "url": "jobs/beltron-programmer-result-cutoff-2026-out.html",
       "slug": "beltron-programmer-result-cutoff-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "ISRO ICRB Scientist / Engineer Result 2026",
+      "url": "jobs/isro-icrb-scientist-engineer-result-2026-out.html",
+      "slug": "isro-icrb-scientist-engineer-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -493,12 +493,6 @@
       "date": "10/04/2026"
     },
     {
-      "title": "BPSC MVI Final Result 2026",
-      "url": "jobs/bpsc-mvi-final-result-2026-out.html",
-      "slug": "bpsc-mvi-final-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
       "title": "OICL Assistant Score Card 2026",
       "url": "jobs/oicl-assistant-score-card-2026-out.html",
       "slug": "oicl-assistant-score-card-2026-out",
@@ -511,21 +505,15 @@
       "date": "10/04/2026"
     },
     {
+      "title": "BPSC MVI Final Result 2026",
+      "url": "jobs/bpsc-mvi-final-result-2026-out.html",
+      "slug": "bpsc-mvi-final-result-2026-out",
+      "date": "10/04/2026"
+    },
+    {
       "title": "MPPSC Food Safety Officer FSO Result 2026",
       "url": "jobs/mppsc-food-safety-officer-fso-result-2026-out.html",
       "slug": "mppsc-food-safety-officer-fso-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "AIIMS 4th CRE Group B, C Result 2026",
-      "url": "jobs/aiims-4th-cre-group-b-c-result-2026-out.html",
-      "slug": "aiims-4th-cre-group-b-c-result-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "IOCL Junior Engineer Final Result 2026",
-      "url": "jobs/iocl-junior-engineer-final-result-2026-out.html",
-      "slug": "iocl-junior-engineer-final-result-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -541,15 +529,21 @@
       "date": "10/04/2026"
     },
     {
-      "title": "India Post IPPB GDS Executive 2025 Final Result",
-      "url": "jobs/india-post-ippb-gds-executive-2025-final-result-out.html",
-      "slug": "india-post-ippb-gds-executive-2025-final-result-out",
+      "title": "AIIMS 4th CRE Group B, C Result 2026",
+      "url": "jobs/aiims-4th-cre-group-b-c-result-2026-out.html",
+      "slug": "aiims-4th-cre-group-b-c-result-2026-out",
       "date": "10/04/2026"
     },
     {
-      "title": "CGPSC Court Manager Pre Result 2026",
-      "url": "jobs/cgpsc-court-manager-pre-result-2026-out.html",
-      "slug": "cgpsc-court-manager-pre-result-2026-out",
+      "title": "IOCL Junior Engineer Final Result 2026",
+      "url": "jobs/iocl-junior-engineer-final-result-2026-out.html",
+      "slug": "iocl-junior-engineer-final-result-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "India Post IPPB GDS Executive 2025 Final Result",
+      "url": "jobs/india-post-ippb-gds-executive-2025-final-result-out.html",
+      "slug": "india-post-ippb-gds-executive-2025-final-result-out",
       "date": "10/04/2026"
     },
     {
@@ -557,13 +551,19 @@
       "url": "jobs/aai-junior-executive-result-2026-out.html",
       "slug": "aai-junior-executive-result-2026-out",
       "date": "10/04/2026"
+    },
+    {
+      "title": "CGPSC Court Manager Pre Result 2026",
+      "url": "jobs/cgpsc-court-manager-pre-result-2026-out.html",
+      "slug": "cgpsc-court-manager-pre-result-2026-out",
+      "date": "10/04/2026"
     }
   ],
   "Answer Key": [
     {
-      "title": "Bihar BPSC Special School Teacher Final Answer Key 2026",
-      "url": "jobs/bihar-bpsc-special-school-teacher-final-answer-key-2026-out.html",
-      "slug": "bihar-bpsc-special-school-teacher-final-answer-key-2026-out",
+      "title": "BPSC ASO Final Answer Key 2026",
+      "url": "jobs/bpsc-aso-final-answer-key-2026-out.html",
+      "slug": "bpsc-aso-final-answer-key-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -573,9 +573,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "BPSC ASO Final Answer Key 2026",
-      "url": "jobs/bpsc-aso-final-answer-key-2026-out.html",
-      "slug": "bpsc-aso-final-answer-key-2026-out",
+      "title": "Syllabus",
+      "url": "jobs/sarkari-result.html",
+      "slug": "sarkari-result",
       "date": "10/04/2026"
     },
     {
@@ -585,27 +585,21 @@
       "date": "10/04/2026"
     },
     {
-      "title": "Syllabus",
-      "url": "jobs/sarkari-result.html",
-      "slug": "sarkari-result",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "NTA UGC NET December Final Answer Key 2026",
-      "url": "jobs/nta-ugc-net-december-final-answer-key-2026-out.html",
-      "slug": "nta-ugc-net-december-final-answer-key-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "UPSSSC Stenographer Revised Answer Key 2026",
-      "url": "jobs/upsssc-stenographer-revised-answer-key-2026.html",
-      "slug": "upsssc-stenographer-revised-answer-key-2026",
+      "title": "Bihar BPSC Special School Teacher Final Answer Key 2026",
+      "url": "jobs/bihar-bpsc-special-school-teacher-final-answer-key-2026-out.html",
+      "slug": "bihar-bpsc-special-school-teacher-final-answer-key-2026-out",
       "date": "10/04/2026"
     },
     {
       "title": "Airforce Group Y/ Medical Assistant Airmen Intake 01/2027 Answer Key",
       "url": "jobs/airforce-group-y-medical-assistant-airmen-intake-012027-answer-key-out.html",
       "slug": "airforce-group-y-medical-assistant-airmen-intake-012027-answer-key-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "UPSSSC Stenographer Revised Answer Key 2026",
+      "url": "jobs/upsssc-stenographer-revised-answer-key-2026.html",
+      "slug": "upsssc-stenographer-revised-answer-key-2026",
       "date": "10/04/2026"
     },
     {
@@ -618,6 +612,12 @@
       "title": "Indian Airforce Agniveer Vayu Intake 01/2027 Answer Key",
       "url": "jobs/indian-airforce-agniveer-vayu-intake-012027-answer-key-out.html",
       "slug": "indian-airforce-agniveer-vayu-intake-012027-answer-key-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "NTA UGC NET December Final Answer Key 2026",
+      "url": "jobs/nta-ugc-net-december-final-answer-key-2026-out.html",
+      "slug": "nta-ugc-net-december-final-answer-key-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -657,12 +657,6 @@
       "date": "10/04/2026"
     },
     {
-      "title": "UP Police SI Answer Key 2026",
-      "url": "jobs/up-police-si-answer-key-2026-out.html",
-      "slug": "up-police-si-answer-key-2026-out",
-      "date": "10/04/2026"
-    },
-    {
       "title": "RRB ALP Answer Key 2026",
       "url": "jobs/rrb-alp-answer-key-2026-out.html",
       "slug": "rrb-alp-answer-key-2026-out",
@@ -681,9 +675,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "SSC Phase 13 Final Answer Key 2026",
-      "url": "jobs/ssc-selection-phase-13-final-answer-key-2026-out.html",
-      "slug": "ssc-selection-phase-13-final-answer-key-2026-out",
+      "title": "UP Police SI Answer Key 2026",
+      "url": "jobs/up-police-si-answer-key-2026-out.html",
+      "slug": "up-police-si-answer-key-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -693,15 +687,21 @@
       "date": "10/04/2026"
     },
     {
+      "title": "MPESB ITI Training Officer Answer Key 2026",
+      "url": "jobs/mpesb-iti-training-officer-answer-key-2026-out.html",
+      "slug": "mpesb-iti-training-officer-answer-key-2026-out",
+      "date": "10/04/2026"
+    },
+    {
       "title": "UPPSC Staff Nurse Unani Answer Key 2026",
       "url": "jobs/uppsc-staff-nurse-unani-answer-key-2026-out.html",
       "slug": "uppsc-staff-nurse-unani-answer-key-2026-out",
       "date": "10/04/2026"
     },
     {
-      "title": "MPESB ITI Training Officer Answer Key 2026",
-      "url": "jobs/mpesb-iti-training-officer-answer-key-2026-out.html",
-      "slug": "mpesb-iti-training-officer-answer-key-2026-out",
+      "title": "SSC Phase 13 Final Answer Key 2026",
+      "url": "jobs/ssc-selection-phase-13-final-answer-key-2026-out.html",
+      "slug": "ssc-selection-phase-13-final-answer-key-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -712,12 +712,6 @@
     }
   ],
   "Admit Card": [
-    {
-      "title": "AIIMS NORCET 10th Nursing Officer Admit Card 2026",
-      "url": "jobs/aiims-norcet-10th-nursing-officer-admit-card-2026-out.html",
-      "slug": "aiims-norcet-10th-nursing-officer-admit-card-2026-out",
-      "date": "10/04/2026"
-    },
     {
       "title": "SSC CHSL Tier-II Admit Card 2026",
       "url": "jobs/ssc-chsl-tier-ii-admit-card-2026-out.html",
@@ -737,15 +731,15 @@
       "date": "10/04/2026"
     },
     {
-      "title": "Result",
-      "url": "jobs/sarkari-result.html",
-      "slug": "sarkari-result",
+      "title": "AIIMS NORCET 10th Nursing Officer Admit Card 2026",
+      "url": "jobs/aiims-norcet-10th-nursing-officer-admit-card-2026-out.html",
+      "slug": "aiims-norcet-10th-nursing-officer-admit-card-2026-out",
       "date": "10/04/2026"
     },
     {
-      "title": "UPSSSC Junior Engineer Mains Exam Fee Payment 2026",
-      "url": "jobs/upsssc-junior-engineer-mains-exam-fee-payment-2026.html",
-      "slug": "upsssc-junior-engineer-mains-exam-fee-payment-2026",
+      "title": "Result",
+      "url": "jobs/sarkari-result.html",
+      "slug": "sarkari-result",
       "date": "10/04/2026"
     },
     {
@@ -755,15 +749,21 @@
       "date": "10/04/2026"
     },
     {
-      "title": "BPSC AEDO Admit Card 2026",
-      "url": "jobs/bpsc-aedo-admit-card-2026-out.html",
-      "slug": "bpsc-aedo-admit-card-2026-out",
-      "date": "10/04/2026"
-    },
-    {
       "title": "Bihar Police BPSSC Havildar Clerk Rejected Candidates List 2026",
       "url": "jobs/bihar-police-bpssc-havildar-clerk-rejected-candidates-list-2026.html",
       "slug": "bihar-police-bpssc-havildar-clerk-rejected-candidates-list-2026",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "UPSSSC Junior Engineer Mains Exam Fee Payment 2026",
+      "url": "jobs/upsssc-junior-engineer-mains-exam-fee-payment-2026.html",
+      "slug": "upsssc-junior-engineer-mains-exam-fee-payment-2026",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "BPSC AEDO Admit Card 2026",
+      "url": "jobs/bpsc-aedo-admit-card-2026-out.html",
+      "slug": "bpsc-aedo-admit-card-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -773,21 +773,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "Haryana Police Constable PMT / PST Date 2026",
-      "url": "jobs/haryana-police-constable-pmt-pst-date-2026-out.html",
-      "slug": "haryana-police-constable-pmt-pst-date-2026-out",
-      "date": "10/04/2026"
-    },
-    {
       "title": "IDBI Bank JAM Admit Card 2026",
       "url": "jobs/idbi-bank-jam-admit-card-2026-out.html",
       "slug": "idbi-bank-jam-admit-card-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "NTA NSSNET Admit Card 2026",
-      "url": "jobs/nta-nssnet-admit-card-2026-out.html",
-      "slug": "nta-nssnet-admit-card-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -803,21 +791,21 @@
       "date": "10/04/2026"
     },
     {
-      "title": "NABARD Development Assistant Grade-B Mains Admit Card 2026",
-      "url": "jobs/nabard-development-assistant-grade-b-mains-admit-card-2026-out.html",
-      "slug": "nabard-development-assistant-grade-b-mains-admit-card-2026-out",
+      "title": "Haryana Police Constable PMT / PST Date 2026",
+      "url": "jobs/haryana-police-constable-pmt-pst-date-2026-out.html",
+      "slug": "haryana-police-constable-pmt-pst-date-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "NTA NSSNET Admit Card 2026",
+      "url": "jobs/nta-nssnet-admit-card-2026-out.html",
+      "slug": "nta-nssnet-admit-card-2026-out",
       "date": "10/04/2026"
     },
     {
       "title": "UPSC CDS-I Admit Card 2026",
       "url": "jobs/upsc-cds-i-admit-card-2026-out.html",
       "slug": "upsc-cds-i-admit-card-2026-out",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "MPESB Police SI and Subedar Phase-II New Exam Date 2026",
-      "url": "jobs/mpesb-police-si-and-subedar-phase-ii-new-exam-date-2026-out.html",
-      "slug": "mpesb-police-si-and-subedar-phase-ii-new-exam-date-2026-out",
       "date": "10/04/2026"
     },
     {
@@ -833,9 +821,33 @@
       "date": "10/04/2026"
     },
     {
+      "title": "MPESB Police SI and Subedar Phase-II New Exam Date 2026",
+      "url": "jobs/mpesb-police-si-and-subedar-phase-ii-new-exam-date-2026-out.html",
+      "slug": "mpesb-police-si-and-subedar-phase-ii-new-exam-date-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "NABARD Development Assistant Grade-B Mains Admit Card 2026",
+      "url": "jobs/nabard-development-assistant-grade-b-mains-admit-card-2026-out.html",
+      "slug": "nabard-development-assistant-grade-b-mains-admit-card-2026-out",
+      "date": "10/04/2026"
+    },
+    {
       "title": "UPSC NDA / NA-I Admit Card 2026",
       "url": "jobs/upsc-nda-na-i-admit-card-2026.html",
       "slug": "upsc-nda-na-i-admit-card-2026",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "UPSSSC Pharmacist Exam Date 2026",
+      "url": "jobs/upsssc-pharmacist-exam-date-2026-out.html",
+      "slug": "upsssc-pharmacist-exam-date-2026-out",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "UPPSC Technical Education Principal Admit Card 2026",
+      "url": "jobs/uppsc-technical-education-principal-admit-card-2026.html",
+      "slug": "uppsc-technical-education-principal-admit-card-2026",
       "date": "10/04/2026"
     },
     {
@@ -849,25 +861,13 @@
       "url": "jobs/upsc-iesiss-exam-date-2026-out.html",
       "slug": "upsc-iesiss-exam-date-2026-out",
       "date": "10/04/2026"
-    },
-    {
-      "title": "UPPSC Technical Education Principal Admit Card 2026",
-      "url": "jobs/uppsc-technical-education-principal-admit-card-2026.html",
-      "slug": "uppsc-technical-education-principal-admit-card-2026",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "UPSSSC Pharmacist Exam Date 2026",
-      "url": "jobs/upsssc-pharmacist-exam-date-2026-out.html",
-      "slug": "upsssc-pharmacist-exam-date-2026-out",
-      "date": "10/04/2026"
     }
   ],
   "Syllabus": [
     {
-      "title": "UP Police Computer Operator Syllabus / Exam Pattern 2025",
-      "url": "jobs/up-police-computer-operator-syllabus-exam-pattern-2025-out.html",
-      "slug": "up-police-computer-operator-syllabus-exam-pattern-2025-out",
+      "title": "Result",
+      "url": "jobs/sarkari-result.html",
+      "slug": "sarkari-result",
       "date": "10/04/2026"
     },
     {
@@ -877,9 +877,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "Result",
-      "url": "jobs/sarkari-result.html",
-      "slug": "sarkari-result",
+      "title": "UP Police Computer Operator Syllabus / Exam Pattern 2025",
+      "url": "jobs/up-police-computer-operator-syllabus-exam-pattern-2025-out.html",
+      "slug": "up-police-computer-operator-syllabus-exam-pattern-2025-out",
       "date": "10/04/2026"
     }
   ],
@@ -891,9 +891,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "UPTET Online Form 2026",
-      "url": "jobs/uptet-online-form-2026-start.html",
-      "slug": "uptet-online-form-2026-start",
+      "title": "Admit Card",
+      "url": "jobs/sarkari-result.html",
+      "slug": "sarkari-result",
       "date": "10/04/2026"
     },
     {
@@ -909,15 +909,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "Admit Card",
-      "url": "jobs/sarkari-result.html",
-      "slug": "sarkari-result",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "MPESB Nursing Officer / Sister Tutor Recruitment 2026",
-      "url": "jobs/mpesb-nursing-officer-sister-tutor-online-form-2026-start.html",
-      "slug": "mpesb-nursing-officer-sister-tutor-online-form-2026-start",
+      "title": "UPTET Online Form 2026",
+      "url": "jobs/uptet-online-form-2026-start.html",
+      "slug": "uptet-online-form-2026-start",
       "date": "10/04/2026"
     },
     {
@@ -933,15 +927,27 @@
       "date": "10/04/2026"
     },
     {
+      "title": "Railway RRB ALP Recruitment 2026",
+      "url": "jobs/railway-rrb-alp-online-form-2026-11127-posts.html",
+      "slug": "railway-rrb-alp-online-form-2026-11127-posts",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "MPESB Nursing Officer / Sister Tutor Recruitment 2026",
+      "url": "jobs/mpesb-nursing-officer-sister-tutor-online-form-2026-start.html",
+      "slug": "mpesb-nursing-officer-sister-tutor-online-form-2026-start",
+      "date": "10/04/2026"
+    },
+    {
       "title": "Punjab and Sind Bank LBO Recruitment 2026",
       "url": "jobs/punjab-and-sind-bank-lbo-online-form-2026.html",
       "slug": "punjab-and-sind-bank-lbo-online-form-2026",
       "date": "10/04/2026"
     },
     {
-      "title": "Railway RRB ALP Recruitment 2026",
-      "url": "jobs/railway-rrb-alp-online-form-2026-11127-posts.html",
-      "slug": "railway-rrb-alp-online-form-2026-11127-posts",
+      "title": "BTSC Laboratory Assistant Recruitment 2026",
+      "url": "jobs/btsc-laboratory-assistant-online-form-2026-start.html",
+      "slug": "btsc-laboratory-assistant-online-form-2026-start",
       "date": "10/04/2026"
     },
     {
@@ -957,9 +963,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "BTSC Laboratory Assistant Recruitment 2026",
-      "url": "jobs/btsc-laboratory-assistant-online-form-2026-start.html",
-      "slug": "btsc-laboratory-assistant-online-form-2026-start",
+      "title": "UPSSSC UP Pollution Control Board Various Post Recruitment 2026",
+      "url": "jobs/upsssc-up-pollution-control-board-various-post-online-form-2026-start.html",
+      "slug": "upsssc-up-pollution-control-board-various-post-online-form-2026-start",
       "date": "10/04/2026"
     },
     {
@@ -969,15 +975,15 @@
       "date": "10/04/2026"
     },
     {
-      "title": "UPSSSC UP Pollution Control Board Various Post Recruitment 2026",
-      "url": "jobs/upsssc-up-pollution-control-board-various-post-online-form-2026-start.html",
-      "slug": "upsssc-up-pollution-control-board-various-post-online-form-2026-start",
-      "date": "10/04/2026"
-    },
-    {
       "title": "Indian Navy Agniveer MR Musician Recruitment 2026",
       "url": "jobs/indian-navy-agniveer-mr-musician-online-form-2026.html",
       "slug": "indian-navy-agniveer-mr-musician-online-form-2026",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "Patna High Court Technical Assistant Recruitment 2026",
+      "url": "jobs/patna-high-court-technical-assistant-online-form-2026-start.html",
+      "slug": "patna-high-court-technical-assistant-online-form-2026-start",
       "date": "10/04/2026"
     },
     {
@@ -990,12 +996,6 @@
       "title": "UP LT Grade Assistant Teacher Mains Online Form 2026",
       "url": "jobs/up-lt-grade-assistant-teacher-mains-online-form-2026.html",
       "slug": "up-lt-grade-assistant-teacher-mains-online-form-2026",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "Patna High Court Technical Assistant Recruitment 2026",
-      "url": "jobs/patna-high-court-technical-assistant-online-form-2026-start.html",
-      "slug": "patna-high-court-technical-assistant-online-form-2026-start",
       "date": "10/04/2026"
     },
     {
@@ -1017,15 +1017,15 @@
       "date": "10/04/2026"
     },
     {
-      "title": "BPSC School Teacher TRE 4.0 Recruitment 2026",
-      "url": "jobs/bpsc-school-teacher-tre-40-online-form-2026-44000-posts.html",
-      "slug": "bpsc-school-teacher-tre-40-online-form-2026-44000-posts",
-      "date": "10/04/2026"
-    },
-    {
       "title": "MPESB Van Rakshak / Jail Prahari Recruitment 2026",
       "url": "jobs/mpesb-van-rakshak-jail-prahari-online-form-2026-date-extend.html",
       "slug": "mpesb-van-rakshak-jail-prahari-online-form-2026-date-extend",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "BPSC School Teacher TRE 4.0 Recruitment 2026",
+      "url": "jobs/bpsc-school-teacher-tre-40-online-form-2026-44000-posts.html",
+      "slug": "bpsc-school-teacher-tre-40-online-form-2026-44000-posts",
       "date": "10/04/2026"
     },
     {
@@ -1049,9 +1049,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "OFSS Bihar 11th Admissions Online Form 2026",
-      "url": "jobs/ofss-bihar-11th-admissions-online-form-2026-start.html",
-      "slug": "ofss-bihar-11th-admissions-online-form-2026-start",
+      "title": "UP Polytechnic JEECUP Online Form 2026",
+      "url": "jobs/up-polytechnic-jeecup-online-form-2026.html",
+      "slug": "up-polytechnic-jeecup-online-form-2026",
       "date": "10/04/2026"
     },
     {
@@ -1061,21 +1061,15 @@
       "date": "10/04/2026"
     },
     {
-      "title": "UP Polytechnic JEECUP Online Form 2026",
-      "url": "jobs/up-polytechnic-jeecup-online-form-2026.html",
-      "slug": "up-polytechnic-jeecup-online-form-2026",
+      "title": "OFSS Bihar 11th Admissions Online Form 2026",
+      "url": "jobs/ofss-bihar-11th-admissions-online-form-2026-start.html",
+      "slug": "ofss-bihar-11th-admissions-online-form-2026-start",
       "date": "10/04/2026"
     },
     {
       "title": "MPESB PAT Online Form 2026",
       "url": "jobs/mpesb-pat-online-form-2026.html",
       "slug": "mpesb-pat-online-form-2026",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "Jharkhand Teacher Eligibility Test Online Form 2026",
-      "url": "jobs/jharkhand-teacher-eligibility-test-online-form-2026.html",
-      "slug": "jharkhand-teacher-eligibility-test-online-form-2026",
       "date": "10/04/2026"
     },
     {
@@ -1097,15 +1091,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "DUVASU Mathura PVT Online Form 2026",
-      "url": "jobs/duvasu-mathura-pvt-online-form-2026.html",
-      "slug": "duvasu-mathura-pvt-online-form-2026",
-      "date": "10/04/2026"
-    },
-    {
-      "title": "JCECEB Jharkhand BEd Online Form 2026",
-      "url": "jobs/jceceb-jharkhand-bed-online-form-2026.html",
-      "slug": "jceceb-jharkhand-bed-online-form-2026",
+      "title": "Jharkhand Teacher Eligibility Test Online Form 2026",
+      "url": "jobs/jharkhand-teacher-eligibility-test-online-form-2026.html",
+      "slug": "jharkhand-teacher-eligibility-test-online-form-2026",
       "date": "10/04/2026"
     },
     {
@@ -1121,15 +1109,27 @@
       "date": "10/04/2026"
     },
     {
+      "title": "JCECEB Jharkhand BEd Online Form 2026",
+      "url": "jobs/jceceb-jharkhand-bed-online-form-2026.html",
+      "slug": "jceceb-jharkhand-bed-online-form-2026",
+      "date": "10/04/2026"
+    },
+    {
       "title": "MP RTE Free Admission Online Form 2026",
       "url": "jobs/mp-rte-online-form-2026.html",
       "slug": "mp-rte-online-form-2026",
       "date": "10/04/2026"
     },
     {
-      "title": "UPBEd Online Form 2026",
-      "url": "jobs/upbed-online-form-2026-start.html",
-      "slug": "upbed-online-form-2026-start",
+      "title": "DUVASU Mathura PVT Online Form 2026",
+      "url": "jobs/duvasu-mathura-pvt-online-form-2026.html",
+      "slug": "duvasu-mathura-pvt-online-form-2026",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "BCECE Mop-Up Revised Counselling Schedule 2025",
+      "url": "jobs/bcece-mop-up-revised-counselling-schedule-2025.html",
+      "slug": "bcece-mop-up-revised-counselling-schedule-2025",
       "date": "10/04/2026"
     },
     {
@@ -1145,9 +1145,9 @@
       "date": "10/04/2026"
     },
     {
-      "title": "BCECE Mop-Up Revised Counselling Schedule 2025",
-      "url": "jobs/bcece-mop-up-revised-counselling-schedule-2025.html",
-      "slug": "bcece-mop-up-revised-counselling-schedule-2025",
+      "title": "UPBEd Online Form 2026",
+      "url": "jobs/upbed-online-form-2026-start.html",
+      "slug": "upbed-online-form-2026-start",
       "date": "10/04/2026"
     },
     {
@@ -1169,12 +1169,6 @@
       "date": "10/04/2026"
     },
     {
-      "title": "UP Polytechnic JEECUP Online Counseling 2025",
-      "url": "jobs/up-polytechnic-jeecup-online-counseling-2025.html",
-      "slug": "up-polytechnic-jeecup-online-counseling-2025",
-      "date": "10/04/2026"
-    },
-    {
       "title": "MUIT Diploma Admissions Online Form 2025",
       "url": "jobs/muit-diploma-admissions-online-form-2025.html",
       "slug": "muit-diploma-admissions-online-form-2025",
@@ -1184,6 +1178,12 @@
       "title": "Bihar ITI CAT 2025 Offline Mop-Up Counselling",
       "url": "jobs/bihar-iti-cat-offline-mop-up-counselling-2025.html",
       "slug": "bihar-iti-cat-offline-mop-up-counselling-2025",
+      "date": "10/04/2026"
+    },
+    {
+      "title": "UP Polytechnic JEECUP Online Counseling 2025",
+      "url": "jobs/up-polytechnic-jeecup-online-counseling-2025.html",
+      "slug": "up-polytechnic-jeecup-online-counseling-2025",
       "date": "10/04/2026"
     }
   ]

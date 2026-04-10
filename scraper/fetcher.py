@@ -5,26 +5,15 @@ from datetime import datetime
 from scrapling.fetchers import StealthyFetcher
 
 def is_valid_year(text, url):
-    """
-    Checks if the content is from 2025 or newer.
-    Strictly filters out anything containing 2000-2024.
-    """
-    valid_years = ["2025", "2026", "2027", "2028"]
-    invalid_years = [str(y) for y in range(2000, 2025)]
-    
-    text_lower = text.lower()
+    """Check if content is recent (2025+). Only filter by URL year."""
+    valid_years = ["2025", "2026", "2027"]
     url_lower = url.lower()
-    
-    # Check for invalid years first to be strict
-    if any(yr in text_lower or yr in url_lower for yr in invalid_years):
-        return False
-        
-    # Check if a valid year is present
-    if any(yr in text_lower or yr in url_lower for yr in valid_years):
+    # Only check the URL for year, not the title text
+    if any(yr in url_lower for yr in valid_years):
         return True
-        
-    # Special case: If no year is found but the post is very recent (no year in title)
-    # We might allow it if it's from 2026 specifically (future-proof)
+    # If no year in URL, check title
+    if any(yr in text.lower() for yr in valid_years):
+        return True
     return False
 
 def scrape_jobs():
@@ -36,7 +25,7 @@ def scrape_jobs():
     ]
     
     all_jobs = []
-    output_file = "public/jobs.json"
+    output_file = "data/scraped_raw.json"
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     
     try:

@@ -46,6 +46,8 @@ async function syncAll() {
             const validDomains = ['sarkariresult.com.cm', 'sarkariresult.com', 'rojgarresult.com'];
             const blacklistYrs = [2021, 2022, 2023, 2024];
 
+            const SKIP_TITLES = ['result', 'admit card', 'syllabus', 'answer key', 'latest jobs', 'home', 'contact'];
+
             $list('.entry-content li a, .entry-content h2 a, article h2 a, .home-display a, .gb-grid-column a').each((i, el) => {
                 const title = $list(el).text().trim();
                 const url = $list(el).attr('href');
@@ -53,8 +55,9 @@ async function syncAll() {
                 if (title && url && !url.includes('/category/')) {
                     const hasValidDomain = validDomains.some(d => url.includes(d));
                     const isNewEnough = !blacklistYrs.some(y => title.includes(y.toString()) || url.includes(y.toString()));
+                    const isNotNav = !SKIP_TITLES.some(s => title.toLowerCase() === s);
                     
-                    if (hasValidDomain && isNewEnough) {
+                    if (hasValidDomain && isNewEnough && isNotNav) {
                         links.push({ title, url });
                     }
                 }

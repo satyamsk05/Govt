@@ -33,6 +33,12 @@ async function addJob(url) {
         jobData.url = url;
         jobData.slug = slugify(jobData.title);
 
+        const SKIP_TITLES = ['result', 'admit card', 'syllabus', 'answer key', 'latest jobs', 'home', 'contact'];
+        if (SKIP_TITLES.some(s => jobData.title.toLowerCase() === s)) {
+            console.log('⚠️ Skipped: navigation link detected');
+            return;
+        }
+
         console.log(`✅ Extracted: ${jobData.title}`);
 
         // 3. Generate HTML Page
@@ -45,7 +51,7 @@ async function addJob(url) {
         await updateHomepage(jobData);
 
         console.log(`\n✨ DONE! Job added successfully.`);
-        console.log(`🔗 Link: rollout/${jobData.slug}.html`);
+        console.log(`🔗 Link: jobs/${jobData.slug}.html`);
 
     } catch (error) {
         console.error(`❌ Error: ${error.message}`);
@@ -135,7 +141,7 @@ async function updateDatabase(data) {
     // Add to Latest Jobs category
     const entry = {
         title: data.title,
-        url: `rollout/${data.slug}.html`,
+        url: `jobs/${data.slug}.html`,
         slug: data.slug,
         details: data
     };
@@ -154,7 +160,7 @@ async function updateHomepage(data) {
     
     if (latestJobsBlock) {
         const insertionPoint = indexHtml.indexOf(latestJobsBlock[0]) + latestJobsBlock[0].length;
-        const newLink = `\n       <a class="a2z-item" href="rollout/${data.slug}.html">${data.title}</a>`;
+        const newLink = `\n       <a class="a2z-item" href="jobs/${data.slug}.html">${data.title}</a>`;
         
         const updated = indexHtml.slice(0, insertionPoint) + newLink + indexHtml.slice(insertionPoint);
         await fs.writeFile(CONFIG.indexFile, updated);
