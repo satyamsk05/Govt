@@ -5,7 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "add-job": "node scripts/add_job.mjs",
+    "scrape": "python3 scraper/fetcher.py",
+    "scrape:setup": "bash scraper/setup.sh",
+    "admin": "node admin/server.mjs",
+    "dev": "npm run scrape && node scripts/sync_categories.mjs"
   },
   "repository": {
     "type": "git",
@@ -19,8 +24,9 @@
   },
   "homepage": "https://github.com/satyamsk05/Govt#readme",
   "dependencies": {
-    "axios": "^1.14.0",
+    "axios": "^1.15.0",
     "cheerio": "^1.2.0",
+    "express": "^5.2.1",
     "openai": "^6.33.0"
   }
 }

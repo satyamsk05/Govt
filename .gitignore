@@ -1,0 +1,7 @@
+node_modules/
+venv/
+.DS_Store
+*.log
+data/db.json
+jobs_backup/
+public/jobs.json
