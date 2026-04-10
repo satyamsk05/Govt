@@ -86,7 +86,7 @@ async function syncAll() {
                         jobData.slug = slug;
                         jobData.source_url = item.url;
 
-                        await generateHtmlFile(jobData);
+                        await generateHtmlFile(jobData, cat.name);
 
                         db[cat.name].push({
                             title: jobData.title,
@@ -196,9 +196,11 @@ function extractJobDetails($, rawTitle) {
                         const fee = $(el).text().trim();
                         const fl = fee.toLowerCase();
                         const hasFeeKeyword = ['general', 'obc', 'ews', 'sc', 'st', 'female', 'rs', '₹', 'payment', 'nil', 'free', 'fee', '/-'].some(kw => fl.includes(kw));
-                        const hasJunkKeyword = ['admit card', 'result', 'answer key', 'exam date', 'sarkari result', 'online form', 'height', 'chest', 'weight', 'running', 'ditch'].some(kw => fl.includes(kw));
+                        const hasJunkKeyword = ['admit card', 'result', 'answer key', 'exam date', 'sarkari result', 'online form', 'height', 'chest', 'weight', 'running', 'ditch', 'meter', 'km', 'kg', 'chest', 'jump', 'feet', 'ball', 'throw', 'physical', 'round'].some(kw => fl.includes(kw));
+                        const isTooLong = fee.length > 80; // Fees are usually short. Eligibility text is long.
+                        const hasEligibilityKeyword = ['degree', 'bachelor', 'diploma', 'candidate', 'university', 'recognized', 'council', 'passed', 'intermediate', 'matric'].some(kw => fl.includes(kw));
                         
-                        if (fee && hasFeeKeyword && !hasJunkKeyword) {
+                        if (fee && hasFeeKeyword && !hasJunkKeyword && !isTooLong && !hasEligibilityKeyword) {
                             fees.push(fee);
                         }
                     });
@@ -322,7 +324,11 @@ function extractJobDetails($, rawTitle) {
         if (text.includes('post name')) {
             $(table).find('tr').each((j, tr) => {
                 const tds = $(tr).find('td');
-                if (tds.length >= 2) vacancyTable.push({ post: $(tds[0]).text().trim(), total: $(tds[1]).text().trim(), eligibility: $(tds[2]).text().trim() || "" });
+                if (tds.length === 2) {
+                    vacancyTable.push({ post: $(tds[0]).text().trim(), total: $(tds[1]).text().trim(), eligibility: "" });
+                } else if (tds.length >= 3) {
+                    vacancyTable.push({ post: $(tds[0]).text().trim(), total: $(tds[1]).text().trim(), eligibility: $(tds[2]).text().trim() || "" });
+                }
             });
         } else if ($(table).attr('border') == '1' || $(table).find('th').length > 0) {
             // Greedy capture of any other structured table (Physical Eligibility, selection process tables, etc.)
@@ -357,15 +363,48 @@ function extractJobDetails($, rawTitle) {
         vacancy_total: vacancyTotal, 
         vacancy_table: vacancyTable.slice(1), 
         links: filteredLinks.slice(0, 10),
-        extra_content: extraContent.join('\n')
+        extra_content: extraContent.join('\n'),
+        slug: slugify(title)
     };
 }
 
-async function generateHtmlFile(data) {
+const ORG_DESCRIPTIONS = {
+    "SSC": "Staff Selection Commission (SSC) is a leading recruitment organization under the Government of India. It conducts examinations for various posts in ministries, departments, and subordinate offices. Known for its periodic recruitment cycles like CGL, CHSL, and GD Constable, SSC is a primary choice for millions of aspirants looking for stable government careers in the central administration.",
+    "UPSC": "Union Public Service Commission (UPSC) is India's premier central recruiting agency responsible for appointments to and examinations for all-India services and group A & B of central services. It conducts the prestigious Civil Services Examination, NDA, CDS, and Engineering Services, maintaining the highest standards of integrity and excellence in public service recruitment.",
+    "BPSC": "Bihar Public Service Commission (BPSC) is the constitutional body that conducts recruitment exams for civil service jobs in the State of Bihar. It is responsible for selecting candidates for administrative, police, and educational roles within the state government, ensuring a merit-based selection process for Bihar's public administration.",
+    "UPSSSC": "Uttar Pradesh Subordinate Services Selection Board (UPSSSC) is the state organization authorized to conduct various examinations for appointments to the posts of Group 'C'. It manages large-scale recruitment for लेखपाल (Lekhpal), VDO, and various technical and non-technical assistants across Uttar Pradesh departments.",
+    "RRB": "Railway Recruitment Board (RRB) manages the recruitment of various technical and non-technical categories in Group 'C' and Group 'D' posts in the Indian Railways. With numerous zones across India, RRB is the gateway for candidates seeking a future in the world's largest railway network.",
+    "DEFAULT": "This recruitment is conduct by a major government organization dedicated to providing career opportunities to eligible Indian citizens. The board ensures a transparent and merit-based selection process through competitive examinations, interviews, and physical tests where applicable. Candidates are recruited to serve in various administrative, technical, or supportive roles within the department."
+};
+
+async function generateHtmlFile(data, catName) {
     let template = await fs.readFile(CONFIG.templatePath, 'utf-8');
+
+    // THEME MAPPING
+    let themeClass = 'theme-other';
+    const context = (catName + ' ' + data.title).toUpperCase();
+    
+    if (context.includes('RESULT')) themeClass = 'theme-result';
+    else if (context.includes('ADMIT')) themeClass = 'theme-admit';
+    else if (context.includes('JOBS') || context.includes('RECRUITMENT') || context.includes('VACANCY') || context.includes('ONLINE FORM')) themeClass = 'theme-jobs';
+    else if (context.includes('ANSWER')) themeClass = 'theme-answer';
+    else if (context.includes('SYLLABUS')) themeClass = 'theme-other';
+    else if (context.includes('ADMISSION')) themeClass = 'theme-other';
+
+    const canonicalUrl = `https://rojgar.site/jobs/${data.slug}.html`;
+    const ogTitle = `${data.title} — Rojgar.site`;
+    const ogDescription = `${data.org} ${data.postName} Recruitment 2026 — Total ${data.vacancy_total} Posts. Apply Online, check Admit Card and Result status.`;
+
+    // Content Depth: Gather Org Description
+    let orgDesc = ORG_DESCRIPTIONS.DEFAULT;
+    for (const [key, desc] of Object.entries(ORG_DESCRIPTIONS)) {
+        if (data.org.toUpperCase().includes(key)) { orgDesc = desc; break; }
+    }
+
     const replacements = {
         '[Organization Name]': data.org,
         '[Organization]': data.org,
+        '[THEME_CLASS]': themeClass,
         '[Recruitment]': 'Recruitment',
         '[Exam Name/Post Name 2026]': data.title,
         '[Post Name]': data.postName,
@@ -376,15 +415,133 @@ async function generateHtmlFile(data) {
         '[Total]': data.vacancy_total,
         '[Start Date]': data.dates.begin || "Check Notification",
         '[End Date]': data.dates.last || "Check Notification",
+        '[CANONICAL_URL]': canonicalUrl,
+        '[OG_TITLE]': ogTitle,
+        '[OG_DESCRIPTION]': ogDescription,
+        '[ORG_LONG_DESCRIPTION]': orgDesc,
         '<!-- [DATES_PLACEHOLDER] -->': Object.entries(data.dates).map(([k, v]) => `<div class="info-item"><span>${k}</span> <b>${v}</b></div>`).join('\n'),
         '<!-- [FEES_PLACEHOLDER] -->': data.fees.length > 0 ? data.fees.map(f => `<div class="info-item"><span>${f}</span></div>`).join('\n') : '<div class="info-item"><span>Check Notification</span></div>',
         '<!-- [VACANCY_ROWS] -->': data.vacancy_table.length > 0 ? data.vacancy_table.map(v => `<tr><td><b>${v.post}</b></td><td>${v.total}</td><td>${v.eligibility}</td></tr>`).join('\n') : '<tr><td colspan="3" style="text-align:center;">Check Notification</td></tr>',
         '<!-- [LINKS_ROWS] -->': generateLinksTable(data.links),
         '<!-- [EXTRA_CONTENT] -->': data.extra_content,
+        '[TOC_HTML]': generateTOC(data),
+        '<!-- [FAQ_HTML_EXPANDED] -->': generateFAQHtml(data),
+        '[JSON_LD_JOB]': JSON.stringify(generateJobSchema(data, canonicalUrl), null, 2),
+        '[JSON_LD_FAQ]': JSON.stringify(generateFAQSchema(data), null, 2),
+        '[JSON_LD_BREADCRUMB]': JSON.stringify(generateBreadcrumbSchema(data, canonicalUrl), null, 2),
         '#ApplyOnlineLink': data.source_url
     };
+
     for (const [key, val] of Object.entries(replacements)) template = template.split(key).join(val);
     await fs.writeFile(path.join(CONFIG.outDir, `${data.slug}.html`), template);
+}
+
+function generateTOC(data) {
+    return `<ul style="list-style:none; padding:0; display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+        <li><a href="#about-board"><i class="fas fa-university"></i> About the Board</a></li>
+        <li><a href="#age-limit"><i class="fas fa-user-clock"></i> Age Limit Details</a></li>
+        <li><a href="#prep-tips"><i class="fas fa-lightbulb"></i> Prep Strategy</a></li>
+        <li><a href="#vacancy"><i class="fas fa-users"></i> Vacancy Details</a></li>
+        <li><a href="#how-to-fill"><i class="fas fa-edit"></i> Guided How-to-Fill</a></li>
+        <li><a href="#important-links"><i class="fas fa-link"></i> Direct Links</a></li>
+        <li><a href="#faqs"><i class="fas fa-question-circle"></i> Common Questions</a></li>
+    </ul>`;
+}
+
+function generateFAQHtml(data) {
+    const faqs = generateFAQList(data);
+    return faqs.map(item => `
+        <div class="faq-row" style="margin-bottom: 20px; border-bottom: 1px dashed var(--rule); padding-bottom: 15px;">
+            <p style="font-weight: 700; color: var(--ink2); margin-bottom: 5px;">Q: ${item.q}</p>
+            <p style="color: var(--ink3); font-size: 14px;">A: ${item.a}</p>
+        </div>
+    `).join('');
+}
+
+function generateFAQList(data) {
+    return [
+        { q: `What is the last date to apply for ${data.title}?`, a: `The last date for online application submission for ${data.title} is ${data.dates.last || "to be announced soon"}.` },
+        { q: `How many total vacancies are available for ${data.postName}?`, a: `The ${data.org} has released a total of ${data.vacancy_total} posts for this recruitment cycle.` },
+        { q: `What are the documents required for [Organization Name] online form?`, a: `You will primarily need a Passport sized photograph, scanned signature, and ID proof like Aadhar or PAN card. Specific qualification certificates must also be ready for data entry.` },
+        { q: `Can I apply for ${data.postName} if I am in the final year of my degree?`, a: `Generally, candidates in their final year are eligible to apply, but they must produce their final marksheets at the time of document verification.` },
+        { q: `Is there any age relaxation for category candidates?`, a: `Yes, age relaxation is provided to SC, ST, OBC, and PH candidates according to the prevailing government rules of [Organization Name].` },
+        { q: `What to do if my fee payment fails in ${data.org} form?`, a: `If the money is deducted from your bank but not updated on the portal, please wait for 24-48 hours. If it remains 'unpaid', contact the board's helpline immediately.` },
+        { q: `Where can I download the official notification?`, a: `The official notification PDF can be downloaded from the "Important Links" section at the bottom of this page or from the official site of ${data.org}.` },
+        { q: `How many stages are there in the selection process?`, a: `Typically, the process involves a Written Examination (Prelims/Mains), followed by a Physical Test or Interview, depending on the post specific requirements.` }
+    ];
+}
+
+function generateJobSchema(data, url) {
+    return {
+        "@context": "https://schema.org/",
+        "@type": "JobPosting",
+        "title": data.title,
+        "description": data.short_info,
+        "datePosted": new Date().toISOString().split('T')[0],
+        "validThrough": "2026-12-31",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+            "@type": "Organization",
+            "name": data.org,
+            "sameAs": "https://rojgar.site"
+        },
+        "jobLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "IN"
+            }
+        },
+        "baseSalary": {
+            "@type": "MonetaryAmount",
+            "currency": "INR",
+            "value": {
+                "@type": "QuantitativeValue",
+                "value": 40000,
+                "unitText": "MONTH"
+            }
+        }
+    };
+}
+
+function generateFAQSchema(data) {
+    const questions = generateFAQList(data);
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": questions.map(item => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": { "@type": "Answer", "text": item.a }
+        }))
+    };
+}
+
+function generateBreadcrumbSchema(data, url) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://rojgar.site/index.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Latest Jobs",
+                "item": "https://rojgar.site/jobs/latest-jobs.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": data.title,
+                "item": url
+            }
+        ]
+    };
 }
 
 function generateLinksTable(links) {
@@ -451,6 +608,24 @@ async function generateCategoryPage(catName, catSlug, items) {
     console.log(`   📄 Generated Category Page: ${fileName}`);
 }
 
+function generateListHtml(posts) {
+    if (posts.length === 0) return '<div class="a2z-item">No records found.</div>';
+    
+    // Junk filter: remove redundant navigation links
+    const junkTexts = ['RESULT', 'ADMIT CARD', 'SARKARI RESULT', 'SYLLABUS', 'ANSWER KEY', 'ADMISSION', 'VIEW MORE', 'CLICK HERE'];
+    const filtered = posts.filter(p => {
+        if (!p.title) return false;
+        const pt = p.title.toUpperCase().trim();
+        return !junkTexts.some(jt => pt === jt);
+    });
+
+    return filtered.slice(0, 15).map(p => {
+        const title = p.title || "Job Posting";
+        const url = `jobs/${p.slug}.html`;
+        return `<a class="a2z-item" href="${url}">${title}</a>`;
+    }).join('\n');
+}
+
 async function updateHomepage(db, categories) {
     let index = await fs.readFile(CONFIG.indexFile, 'utf-8');
     const $ = cheerio.load(index);
@@ -460,7 +635,7 @@ async function updateHomepage(db, categories) {
         const container = $(`#${catId}`);
         if (container.length) {
             const items = db[cat.name].slice(0, 12); // Show top 12 on home
-            const listHtml = items.map(item => `<a class="a2z-item" href="${item.url}">${item.title}</a>`).join('\n');
+            const listHtml = generateListHtml(items);
             container.html(listHtml);
         }
     }
