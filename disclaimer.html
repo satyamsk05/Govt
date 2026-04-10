@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disclaimer — Rojgar.site</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .disclaimer-container {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 60px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+        border: 1px solid var(--rule);
+        position: relative;
+        overflow: hidden;
+    }
+    .disclaimer-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(90deg, var(--red), var(--ink));
+    }
+    .disclaimer-title {
+        font-family: var(--font-display);
+        color: var(--ink);
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .disclaimer-title i { color: var(--red); }
+    .disclaimer-text {
+        font-size: 17px;
+        line-height: 1.9;
+        color: var(--ink2);
+        text-align: justify;
+    }
+    .disclaimer-section {
+        margin-bottom: 35px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid var(--rule);
+    }
+    .disclaimer-section:last-child { border-bottom: none; }
+    .disclaimer-section h2 {
+        font-size: 20px;
+        color: var(--ink);
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    @media (max-width: 768px) {
+        .disclaimer-container { padding: 30px; margin: 30px 15px; }
+        .disclaimer-title { font-size: 28px; }
+    }
+  </style>
+</head>
+<body style="background: var(--paper2);">
+<header class="main-header">
+  <div class="header-container" role="banner">
+    <a href="index.html" class="logo">
+      <div class="logo-text">ROJGAR.SITE</div>
+      <p>WWW.ROJGAR.SITE</p>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+    <div class="disclaimer-container">
+        <h1 class="disclaimer-title"><i class="fas fa-shield-alt"></i> Legal Disclaimer</h1>
+        
+        <div class="disclaimer-text">
+            <div class="disclaimer-section">
+                <h2>1. Information Accuracy</h2>
+                <p>
+                    Rojgar.site brings you the latest examination notifications, recruitment forms, results, and answer keys as a courtesy for immediate reference. While we make every attempt to ensure that the information contained on this site has been obtained from reliable sources, Rojgar.site is not responsible for any errors or omissions, or for the results obtained from the use of this information.
+                </p>
+            </div>
+
+            <div class="disclaimer-section">
+                <h2>2. Not a Legal Document</h2>
+                <p>
+                    All data and information provided on this site is for informational purposes only. Rojgar.site makes no representations as to accuracy, completeness, currentness, suitability, or validity of any information on this site and will not be liable for any errors, omissions, or delays in this information or any losses, injuries, or damages arising from its display or use. This website should not be treated as a legal document.
+                </p>
+            </div>
+
+            <div class="disclaimer-section">
+                <h2>3. Verification Required</h2>
+                <p>
+                    Aspirants are strongly advised and cautioned to verify all details directly from the official government notifications or portals before starting any application process or relying on results. The final authority for any recruitment remains with the respective governing bodies and organizations.
+                </p>
+            </div>
+
+            <div class="disclaimer-section">
+                <h2>4. External Links Liability</h2>
+                <p>
+                    Our platform contains links to external websites that are not provided or maintained by or in any way affiliated with Rojgar.site. Please note that we do not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.
+                </p>
+            </div>
+
+            <div class="disclaimer-section">
+                <p style="font-weight: 700; font-style: italic; color: var(--red);">
+                    If you believe any information is incorrect or requires correction, please reach out to us via our official contact channels.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer style="margin-top: 0;">
+  <div class="footer-bottom" style="border-top: 4px solid var(--red);">
+    <div class="footer-bottom-inner">
+      <div class="footer-copy">© 2026 Rojgar.site — All Rights Reserved.</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

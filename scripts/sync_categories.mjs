@@ -195,12 +195,14 @@ function extractJobDetails($, rawTitle) {
                     $(tds[1]).find('li, p, div').each((k, el) => {
                         const fee = $(el).text().trim();
                         const fl = fee.toLowerCase();
-                        const hasFeeKeyword = ['general', 'obc', 'ews', 'sc', 'st', 'female', 'rs', '₹', 'payment', 'nil', 'free', 'fee', '/-'].some(kw => fl.includes(kw));
-                        const hasJunkKeyword = ['admit card', 'result', 'answer key', 'exam date', 'sarkari result', 'online form', 'height', 'chest', 'weight', 'running', 'ditch', 'meter', 'km', 'kg', 'chest', 'jump', 'feet', 'ball', 'throw', 'physical', 'round'].some(kw => fl.includes(kw));
+                        const feePattern = /(general|obc|ews|\bsc\b|\bst\b|female|\brs\.?\b|₹|payment|nil|free|fee|\/-)/i;
+                        const hasFeeKeyword = feePattern.test(fl);
+                        const hasJunkKeyword = ['admit card', 'result', 'answer key', 'exam date', 'sarkari result', 'online form', 'height', 'chest', 'weight', 'running', 'ditch', 'meter', 'km', 'kg', 'jump', 'feet', 'ball', 'throw', 'physical', 'round'].some(kw => fl.includes(kw));
                         const isTooLong = fee.length > 80; // Fees are usually short. Eligibility text is long.
                         const hasEligibilityKeyword = ['degree', 'bachelor', 'diploma', 'candidate', 'university', 'recognized', 'council', 'passed', 'intermediate', 'matric'].some(kw => fl.includes(kw));
+                        const hasLinks = $(el).find('a').length > 0;
                         
-                        if (fee && hasFeeKeyword && !hasJunkKeyword && !isTooLong && !hasEligibilityKeyword) {
+                        if (fee && hasFeeKeyword && !hasJunkKeyword && !isTooLong && !hasEligibilityKeyword && !hasLinks) {
                             fees.push(fee);
                         }
                     });
@@ -608,24 +610,6 @@ async function generateCategoryPage(catName, catSlug, items) {
     console.log(`   📄 Generated Category Page: ${fileName}`);
 }
 
-function generateListHtml(posts) {
-    if (posts.length === 0) return '<div class="a2z-item">No records found.</div>';
-    
-    // Junk filter: remove redundant navigation links
-    const junkTexts = ['RESULT', 'ADMIT CARD', 'SARKARI RESULT', 'SYLLABUS', 'ANSWER KEY', 'ADMISSION', 'VIEW MORE', 'CLICK HERE'];
-    const filtered = posts.filter(p => {
-        if (!p.title) return false;
-        const pt = p.title.toUpperCase().trim();
-        return !junkTexts.some(jt => pt === jt);
-    });
-
-    return filtered.slice(0, 15).map(p => {
-        const title = p.title || "Job Posting";
-        const url = `jobs/${p.slug}.html`;
-        return `<a class="a2z-item" href="${url}">${title}</a>`;
-    }).join('\n');
-}
-
 async function updateHomepage(db, categories) {
     let index = await fs.readFile(CONFIG.indexFile, 'utf-8');
     const $ = cheerio.load(index);
@@ -635,7 +619,7 @@ async function updateHomepage(db, categories) {
         const container = $(`#${catId}`);
         if (container.length) {
             const items = db[cat.name].slice(0, 12); // Show top 12 on home
-            const listHtml = generateListHtml(items);
+            const listHtml = items.map(item => `<a class="a2z-item" href="${item.url}">${item.title}</a>`).join('\n');
             container.html(listHtml);
         }
     }

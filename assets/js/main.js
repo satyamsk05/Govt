@@ -72,20 +72,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let searchIndex = [];
 
+        const getBasePath = () => window.location.pathname.includes('/jobs/') ? '../' : '';
+
         const loadSearchIndex = async () => {
             try {
-                const resp = await fetch('assets/js/search_index.json');
+                const resp = await fetch(getBasePath() + 'search_index.json');
                 searchIndex = await resp.json();
                 console.log('Search Index Loaded');
+                if(searchInput.value.trim().length < 2) showDefaultSuggestions();
             } catch (e) {
                 console.error('Failed to load search index:', e);
             }
         };
 
+        const showDefaultSuggestions = () => {
+            if(searchIndex.length === 0) return;
+            const defaults = searchIndex.slice(0, 8); // Top 8 items usually Latest/Results
+            searchResults.innerHTML = '<div class="search-section-title">🔥 Top Trending Updates</div>' + defaults.map(item => `
+                <a href="${getBasePath()}${item.u.replace('../', '')}" class="search-item">
+                    <span class="search-item-cat">${item.c}</span>
+                    <span class="search-item-title">${item.t}</span>
+                </a>
+            `).join('');
+        };
+
         searchBtn.addEventListener('click', () => {
             searchOverlay.classList.add('visible');
             searchInput.focus();
-            if (searchIndex.length === 0) loadSearchIndex();
+            if (searchIndex.length === 0) {
+                loadSearchIndex();
+            } else {
+                if(searchInput.value.trim().length < 2) showDefaultSuggestions();
+            }
         });
 
         const closeSearch = () => {
@@ -102,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
             if (query.length < 2) {
-                searchResults.innerHTML = '';
+                showDefaultSuggestions();
                 return;
             }
 
@@ -111,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.c.toLowerCase().includes(query)
             ).slice(0, 15);
 
-            searchResults.innerHTML = filtered.map(item => `
-                <a href="${item.u}" class="search-item">
+            searchResults.innerHTML = '<div class="search-section-title">🔍 Search Results</div>' + filtered.map(item => `
+                <a href="${getBasePath()}${item.u.replace('../', '')}" class="search-item">
                     <span class="search-item-cat">${item.c}</span>
                     <span class="search-item-title">${item.t}</span>
                 </a>
