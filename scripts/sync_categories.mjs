@@ -107,11 +107,37 @@ async function syncAll() {
         // 5. Update Homepage
         await updateHomepage(db, categories);
 
+        // 6. Generate Sitemap
+        await generateSitemap(db, categories);
+
         console.log(`\n✅ Deep Sync Completed Successfully.`);
 
     } catch (error) {
         console.error(`❌ Critical Sync Error: ${error.message}`);
     }
+}
+
+async function generateSitemap(db, categories) {
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+    xml += `  <url><loc>https://rojgar.site/</loc><priority>1.0</priority></url>\n`;
+
+    // Add category pages
+    for (const cat of categories) {
+        xml += `  <url><loc>https://rojgar.site/jobs/${cat.slug}.html</loc><priority>0.8</priority></url>\n`;
+    }
+
+    // Add all job pages
+    const seen = new Set();
+    Object.values(db).flat().forEach(item => {
+        if (!seen.has(item.slug)) {
+            xml += `  <url><loc>https://rojgar.site/${item.url}</loc><priority>0.6</priority></url>\n`;
+            seen.add(item.slug);
+        }
+    });
+
+    xml += `</urlset>`;
+    await fs.writeFile('sitemap.xml', xml);
+    console.log(`🗺️ Sitemap.xml updated with ${seen.size} links.`);
 }
 
 function extractJobDetails($, rawTitle) {
