@@ -1,0 +1,32 @@
+# robots.txt for ROJGAR.SITE
+# Specialized for AI SEO and Citation visibility
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /jobs/
+
+# AI Search Bots (Allowing for Citations)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://rojgar.site/sitemap.xml

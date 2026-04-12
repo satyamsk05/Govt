@@ -50,8 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // SEARCH FUNCTIONALITY
+    // SEARCH & RELATED JOBS LOGIC
     const searchBtn = document.querySelector('.search-btn');
+    const isInJobs = window.location.pathname.includes('/jobs/');
+    const basePath = isInJobs ? '../../' : '';
+
     if (searchBtn) {
         const searchOverlay = document.createElement('div');
         searchOverlay.className = 'search-overlay';
@@ -59,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="search-modal">
                 <div class="search-header">
                     <input type="text" id="searchInput" placeholder="Search Jobs, Results, Admit Cards..." autofocus>
-                    <button class="search-close">×</button>
+                    <button class="search-close">&times;</button>
                 </div>
                 <div class="search-results" id="searchResults"></div>
             </div>
@@ -72,24 +75,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let searchIndex = [];
 
-        const getBasePath = () => window.location.pathname.includes('/jobs/') ? '../' : '';
-
         const loadSearchIndex = async () => {
             try {
-                const resp = await fetch(getBasePath() + 'search_index.json');
+                // Try search_index.json first as it is optimized
+                const resp = await fetch(basePath + 'search_index.json');
+                if (!resp.ok) throw new Error('Search index not found');
                 searchIndex = await resp.json();
                 console.log('Search Index Loaded');
                 if(searchInput.value.trim().length < 2) showDefaultSuggestions();
             } catch (e) {
-                console.error('Failed to load search index:', e);
+                console.error('Search Load Error:', e);
             }
         };
 
         const showDefaultSuggestions = () => {
             if(searchIndex.length === 0) return;
-            const defaults = searchIndex.slice(0, 8); // Top 8 items usually Latest/Results
-            searchResults.innerHTML = '<div class="search-section-title">🔥 Top Trending Updates</div>' + defaults.map(item => `
-                <a href="${getBasePath()}${item.u.replace('../', '')}" class="search-item">
+            const defaults = searchIndex.slice(0, 8);
+            searchResults.innerHTML = '<div class="search-section-title">🔥 Latest & Trending</div>' + defaults.map(item => `
+                <a href="${basePath}${item.u}" class="search-item">
                     <span class="search-item-cat">${item.c}</span>
                     <span class="search-item-title">${item.t}</span>
                 </a>
@@ -99,17 +102,13 @@ document.addEventListener('DOMContentLoaded', () => {
         searchBtn.addEventListener('click', () => {
             searchOverlay.classList.add('visible');
             searchInput.focus();
-            if (searchIndex.length === 0) {
-                loadSearchIndex();
-            } else {
-                if(searchInput.value.trim().length < 2) showDefaultSuggestions();
-            }
+            if (searchIndex.length === 0) loadSearchIndex();
+            else if(searchInput.value.trim().length < 2) showDefaultSuggestions();
         });
 
         const closeSearch = () => {
             searchOverlay.classList.remove('visible');
             searchInput.value = '';
-            searchResults.innerHTML = '';
         };
 
         searchClose.addEventListener('click', closeSearch);
@@ -118,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
+            const query = e.target.value.toLowerCase().trim();
             if (query.length < 2) {
                 showDefaultSuggestions();
                 return;
@@ -129,13 +128,73 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.c.toLowerCase().includes(query)
             ).slice(0, 15);
 
-            searchResults.innerHTML = '<div class="search-section-title">🔍 Search Results</div>' + filtered.map(item => `
-                <a href="${getBasePath()}${item.u.replace('../', '')}" class="search-item">
+            searchResults.innerHTML = '<div class="search-section-title">🔍 Search Results</div>' + (filtered.length ? filtered.map(item => `
+                <a href="${basePath}${item.u}" class="search-item">
                     <span class="search-item-cat">${item.c}</span>
                     <span class="search-item-title">${item.t}</span>
                 </a>
-            `).join('');
+            `).join('') : '<div style="padding:24px; text-align:center; color:#888;">No results found for your search.</div>');
         });
+    }
+
+    // RELATED JOBS INJECTION (Only on Job Detail Pages)
+    const relatedContainer = document.getElementById('related-jobs-container');
+    if (relatedContainer && isInJobs) {
+        const loadRelated = async () => {
+            try {
+                const resp = await fetch(basePath + 'search_index.json');
+                const data = await resp.json();
+                
+                // Get current category from breadcrumb or URL
+                const currentCat = document.querySelector('.breadcrumb-item:nth-child(2) a')?.textContent || '';
+                
+                // Filter by same category, excluding current page
+                const currentUrl = window.location.pathname.split('/').slice(-2).join('/');
+                const related = data
+                    .filter(item => (currentCat && item.c === currentCat) || !currentCat)
+                    .filter(item => !window.location.pathname.includes(item.u))
+                    .sort(() => 0.5 - Math.random()) // Shuffle
+                    .slice(0, 3);
+
+                if (related.length) {
+                    relatedContainer.innerHTML = related.map(item => `
+                        <a href="${basePath}${item.u}" class="related-card">
+                            <span class="rel-cat">${item.c}</span>
+                            <span class="rel-title">${item.t}</span>
+                        </a>
+                    `).join('');
+                } else {
+                    relatedContainer.parentElement.style.display = 'none';
+                }
+            } catch (e) {
+                console.error('Related Jobs Error:', e);
+                relatedContainer.parentElement.style.display = 'none';
+            }
+        };
+        loadRelated();
+    }
+
+    // BACK TO TOP
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) backToTop.classList.add('visible');
+            else backToTop.classList.remove('visible');
+        });
+        backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
     }
 });
 
+// GLOBAL UTILS
+function copyPageUrl() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+        const btn = document.querySelector('.share-copy');
+        if (!btn) return;
+        const oldHtml = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        setTimeout(() => { btn.innerHTML = oldHtml; }, 2000);
+    }).catch(err => {
+        console.error('Copy failed:', err);
+    });
+}

@@ -86,13 +86,15 @@ async function syncAll() {
                         jobData.slug = slug;
                         jobData.source_url = item.url;
 
-                        await generateHtmlFile(jobData, cat.name);
+                        await generateHtmlFile(jobData, cat.name, cat.slug);
 
                         db[cat.name].push({
                             title: jobData.title,
-                            url: `jobs/${slug}.html`,
+                            url: `jobs/${cat.slug}/${slug}.html`,
                             slug: slug,
-                            date: new Date().toLocaleDateString('en-GB')
+                            date: new Date().toLocaleDateString('en-GB'),
+                            scraped_at: new Date().toISOString(),
+                            source: 'SarkariResult'
                         });
                     } catch (e) {
                         console.error(`   ⚠️ Failed: ${item.title.substring(0, 20)} - ${e.message}`);
@@ -113,6 +115,9 @@ async function syncAll() {
         // 6. Generate Sitemap
         await generateSitemap(db, categories);
 
+        // 7. Generate Search Index
+        await generateSearchIndex(db);
+
         console.log(`\n✅ Deep Sync Completed Successfully.`);
 
     } catch (error) {
@@ -121,26 +126,50 @@ async function syncAll() {
 }
 
 async function generateSitemap(db, categories) {
+    console.log('🗺️ Generating Sitemap...');
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
-    xml += `  <url><loc>https://rojgar.site/</loc><priority>1.0</priority></url>\n`;
+    
+    const today = new Date().toISOString().split('T')[0];
+    
+    // Core Pages
+    xml += `  <url><loc>https://rojgar.site/index.html</loc><lastmod>${today}</lastmod><priority>1.0</priority></url>\n`;
+    xml += `  <url><loc>https://rojgar.site/disclaimer.html</loc><lastmod>${today}</lastmod><priority>0.5</priority></url>\n`;
 
-    // Add category pages
+    // Category pages
     for (const cat of categories) {
-        xml += `  <url><loc>https://rojgar.site/jobs/${cat.slug}.html</loc><priority>0.8</priority></url>\n`;
+        xml += `  <url><loc>https://rojgar.site/jobs/${cat.slug}/</loc><lastmod>${today}</lastmod><priority>0.8</priority></url>\n`;
     }
 
-    // Add all job pages
+    // All job pages
     const seen = new Set();
     Object.values(db).flat().forEach(item => {
-        if (!seen.has(item.slug)) {
-            xml += `  <url><loc>https://rojgar.site/${item.url}</loc><priority>0.6</priority></url>\n`;
-            seen.add(item.slug);
+        if (item.url && !seen.has(item.url)) {
+            xml += `  <url><loc>https://rojgar.site/${item.url}</loc><lastmod>${today}</lastmod><priority>0.6</priority></url>\n`;
+            seen.add(item.url);
         }
     });
 
     xml += `</urlset>`;
     await fs.writeFile('sitemap.xml', xml);
-    console.log(`🗺️ Sitemap.xml updated with ${seen.size} links.`);
+    console.log(`🗺️ Sitemap.xml updated with ${seen.size + categories.length + 2} links.`);
+}
+
+async function generateSearchIndex(db) {
+    console.log('🔍 Generating Search Index...');
+    const index = [];
+    Object.keys(db).forEach(catName => {
+        db[catName].forEach(item => {
+            index.push({
+                t: item.title,
+                u: item.url,
+                c: catName
+            });
+        });
+    });
+    // Sort by latest first for default suggestions
+    index.reverse();
+    await fs.writeFile('search_index.json', JSON.stringify(index));
+    console.log(`🔍 Search index generated with ${index.length} entries.`);
 }
 
 function extractJobDetails($, rawTitle) {
@@ -170,70 +199,83 @@ function extractJobDetails($, rawTitle) {
     let vacancyTotal = "Check Notification";
     const vacancyTable = [];
     const importantLinks = [];
+    const extraContent = [];
 
     $('.gb-container').each((i, container) => {
         const h4 = $(container).find('h4').text().trim().toLowerCase();
         const h6 = $(container).find('h6').text().trim().toLowerCase();
         
+        // 1. Process Metadata (Dates, Fees, etc.)
         if (h4.includes('important dates') || h4.includes('application fee')) {
-            $(container).find('tr').each((j, tr) => {
-                const tds = $(tr).find('td');
-                if (tds.length >= 2) {
-                    // Dates in first column
-                    const dateText = $(tds[0]).text().trim();
-                    if (dateText.includes(':')) {
-                        const parts = dateText.split(':');
+            const isDateField = h4.includes('important dates');
+            const isFeeField = h4.includes('application fee');
+
+            $(container).find('tr, li, .gb-headline-text').each((j, el) => {
+                const text = $(el).text().trim();
+                const textLower = text.toLowerCase();
+                
+                if (isDateField) {
+                    const parts = text.split(':');
+                    if (parts.length >= 2) {
                         const key = parts[0].toLowerCase();
-                        const val = parts[1].trim();
+                        const val = parts.slice(1).join(':').trim();
                         if (key.includes('begin') || key.includes('start')) dates.begin = val;
                         else if (key.includes('last')) dates.last = val;
                         else if (key.includes('exam')) dates.exam = val;
                         else if (key.includes('admit')) dates.admit = val;
-                        else dates.other = (dates.other ? dates.other + ', ' : '') + val;
+                    } else if (/(begin|start|last|exam|admit)/i.test(textLower)) {
+                        const dateMatch = text.match(/\d{1,2}[\/-]\d{1,2}[\/-]\d{2,4}/);
+                        if (dateMatch) {
+                            if (textLower.includes('begin') || textLower.includes('start')) dates.begin = dateMatch[0];
+                            else if (textLower.includes('last')) dates.last = dateMatch[0];
+                        }
                     }
-                    // Fees in second column
-                    $(tds[1]).find('li, p, div').each((k, el) => {
-                        const fee = $(el).text().trim();
-                        const fl = fee.toLowerCase();
-                        const feePattern = /(general|obc|ews|\bsc\b|\bst\b|female|\brs\.?\b|₹|payment|nil|free|fee|\/-)/i;
-                        const hasFeeKeyword = feePattern.test(fl);
-                        const hasJunkKeyword = ['admit card', 'result', 'answer key', 'exam date', 'sarkari result', 'online form', 'height', 'chest', 'weight', 'running', 'ditch', 'meter', 'km', 'kg', 'jump', 'feet', 'ball', 'throw', 'physical', 'round'].some(kw => fl.includes(kw));
-                        const isTooLong = fee.length > 80; // Fees are usually short. Eligibility text is long.
-                        const hasEligibilityKeyword = ['degree', 'bachelor', 'diploma', 'candidate', 'university', 'recognized', 'council', 'passed', 'intermediate', 'matric'].some(kw => fl.includes(kw));
-                        const hasLinks = $(el).find('a').length > 0;
-                        
-                        if (fee && hasFeeKeyword && !hasJunkKeyword && !isTooLong && !hasEligibilityKeyword && !hasLinks) {
-                            fees.push(fee);
+                }
+                
+                if (isFeeField) {
+                    const feesInLine = text.split(/\n|,/);
+                    feesInLine.forEach(feeLine => {
+                        const feeTrim = feeLine.trim();
+                        if (feeTrim && /(general|obc|ews|sc|st|female|nil|free|fee|rs\.?|₹|\d+\/-)/i.test(feeTrim.toLowerCase())) {
+                            // Extra check: Ensure Fee doesn't look like a date
+                            if (feeTrim.length < 50 && !fees.includes(feeTrim) && !/\d{1,2}[\/-]\d{1,2}/.test(feeTrim)) {
+                                fees.push(feeTrim);
+                            }
                         }
                     });
                 }
             });
-            // Fallback for list-based if table extraction failed
-            if (Object.keys(dates).length === 0) {
-                $(container).find('li').each((j, li) => {
-                    const line = $(li).text().trim();
-                    if (line.includes(':')) {
-                        const [k, v] = line.split(':');
-                        const kl = k.toLowerCase();
-                        if (kl.includes('begin') || kl.includes('start')) dates.begin = v.trim();
-                        else if (kl.includes('last')) dates.last = v.trim();
-                    }
-                });
-            }
-        }
-        if (h4.includes('age limit')) ageLimit = $(container).find('div.gb-headline-text').first().text().trim() || ageLimit;
-        if (h4.includes('vacancy details') || h4.includes('total post')) {
-            const vText = $(container).text();
-            const match = vText.match(/(?:Total|Vacancy)\s*(?:Post|Vacancy|Details)?\s*[:\s-]*(\d+)/i);
-            vacancyTotal = match ? match[1] + " Post" : vacancyTotal;
         }
         
-        // Target Link Section
+        // 2. Process Age Limit
+        if (h4.includes('age limit')) ageLimit = $(container).find('.gb-headline-text, div').first().text().trim().replace(/  +/g, ' ') || ageLimit;
+        
+        // 3. Process Vacancy Total
+        if (h4.includes('vacancy details') || h4.includes('total post')) {
+            const vText = $(container).text().replace(/\n/g, ' ');
+            const match = vText.match(/(?:Total|Vacancy)\s*(?:Post|Vacancy|Details)?\s*[:\s-]*(\d+)/i);
+            vacancyTotal = match ? match[1] + " Post" : "Check Notification";
+        }
+        
+        // 4. Collect Supplemental Content (Physical Eligibility, Category Vacancies, etc.)
+        const isMetadata = ['important dates', 'application fee', 'vacancy details', 'how to fill', 'important links', 'age limit', 'short information'].some(term => h4.includes(term) || h6.includes(term));
+        if (!isMetadata && $(container).find('table').length > 0) {
+            let tableHtml = $(container).html();
+            // Clean watermarks
+            tableHtml = tableHtml.replace(/WWW\.SARKARIRESULT\.COM/gi, '').replace(/SarkariResult\.Com/gi, '').replace(/Sarkari Result/gi, '').trim();
+            if (tableHtml.length > 50) extraContent.push(`<div class="extra-section">${tableHtml}</div>`);
+        }
+        
+        // 5. Process Important Links
         if (h6.includes('important links') || $(container).find('.importaint_links').length > 0) {
            $(container).find('tr').each((j, tr) => {
                const tds = $(tr).find('td');
                if (tds.length === 2) {
                    const label = $(tds[0]).text().trim();
+                   
+                   // Filter out social channels duplication
+                   if (/(whatsapp|telegram|instagram|join channel|follow our)/i.test(label.toLowerCase())) return;
+
                    const links = [];
                    $(tds[1]).find('a').each((k, a) => {
                        const lText = $(a).text().trim();
@@ -317,7 +359,8 @@ function extractJobDetails($, rawTitle) {
         });
     }
 
-    const extraContent = [];
+    // Collect supplemental tables and headers
+
     $('table').each((i, table) => {
         const text = $(table).text().toLowerCase();
         // Skip if already processed for Links or Dates
@@ -379,7 +422,7 @@ const ORG_DESCRIPTIONS = {
     "DEFAULT": "This recruitment is conduct by a major government organization dedicated to providing career opportunities to eligible Indian citizens. The board ensures a transparent and merit-based selection process through competitive examinations, interviews, and physical tests where applicable. Candidates are recruited to serve in various administrative, technical, or supportive roles within the department."
 };
 
-async function generateHtmlFile(data, catName) {
+async function generateHtmlFile(data, catName, catSlug) {
     let template = await fs.readFile(CONFIG.templatePath, 'utf-8');
 
     // THEME MAPPING
@@ -393,7 +436,7 @@ async function generateHtmlFile(data, catName) {
     else if (context.includes('SYLLABUS')) themeClass = 'theme-other';
     else if (context.includes('ADMISSION')) themeClass = 'theme-other';
 
-    const canonicalUrl = `https://rojgar.site/jobs/${data.slug}.html`;
+    const canonicalUrl = `https://rojgar.site/jobs/${catSlug}/${data.slug}.html`;
     const ogTitle = `${data.title} — Rojgar.site`;
     const ogDescription = `${data.org} ${data.postName} Recruitment 2026 — Total ${data.vacancy_total} Posts. Apply Online, check Admit Card and Result status.`;
 
@@ -415,27 +458,33 @@ async function generateHtmlFile(data, catName) {
         '[Brief Summary of Recruitment]': data.short_info,
         '[Age Detail]': data.age_limit,
         '[Total]': data.vacancy_total,
+        '[CATEGORY_NAME]': catName,
+        '[Age Date]': data.dates.age_as_on || "Notification Date",
+        '[Last Date Value]': data.dates.last || "Check Link",
         '[Start Date]': data.dates.begin || "Check Notification",
         '[End Date]': data.dates.last || "Check Notification",
         '[CANONICAL_URL]': canonicalUrl,
         '[OG_TITLE]': ogTitle,
         '[OG_DESCRIPTION]': ogDescription,
         '[ORG_LONG_DESCRIPTION]': orgDesc,
-        '<!-- [DATES_PLACEHOLDER] -->': Object.entries(data.dates).map(([k, v]) => `<div class="info-item"><span>${k}</span> <b>${v}</b></div>`).join('\n'),
-        '<!-- [FEES_PLACEHOLDER] -->': data.fees.length > 0 ? data.fees.map(f => `<div class="info-item"><span>${f}</span></div>`).join('\n') : '<div class="info-item"><span>Check Notification</span></div>',
-        '<!-- [VACANCY_ROWS] -->': data.vacancy_table.length > 0 ? data.vacancy_table.map(v => `<tr><td><b>${v.post}</b></td><td>${v.total}</td><td>${v.eligibility}</td></tr>`).join('\n') : '<tr><td colspan="3" style="text-align:center;">Check Notification</td></tr>',
-        '<!-- [LINKS_ROWS] -->': generateLinksTable(data.links),
-        '<!-- [EXTRA_CONTENT] -->': data.extra_content,
+        '[DATES_LIST]': Object.entries(data.dates).map(([k, v]) => `<div class="info-item"><span>${k}</span> <b>${v}</b></div>`).join('\n'),
+        '[FEES_LIST]': data.fees.length > 0 ? data.fees.map(f => `<div class="info-item"><span>${f}</span></div>`).join('\n') : '<div class="info-item"><span>Check Notification</span></div>',
+        '[VACANCY_ROWS]': data.vacancy_table.length > 0 ? data.vacancy_table.map(v => `<tr><td><b>${v.post}</b></td><td>${v.total}</td><td>${v.eligibility}</td></tr>`).join('\n') : '<tr><td colspan="3" style="text-align:center;">Check Notification</td></tr>',
+        '[LINKS_ROWS]': generateLinksTable(data.links),
+        '[EXTRA_CONTENT]': data.extra_content,
         '[TOC_HTML]': generateTOC(data),
-        '<!-- [FAQ_HTML_EXPANDED] -->': generateFAQHtml(data),
+        '[FAQ_HTML]': generateFAQHtml(data),
         '[JSON_LD_JOB]': JSON.stringify(generateJobSchema(data, canonicalUrl), null, 2),
         '[JSON_LD_FAQ]': JSON.stringify(generateFAQSchema(data), null, 2),
-        '[JSON_LD_BREADCRUMB]': JSON.stringify(generateBreadcrumbSchema(data, canonicalUrl), null, 2),
+        '[JSON_LD_BREADCRUMB]': JSON.stringify(generateBreadcrumbSchema(data, canonicalUrl, catName, catSlug), null, 2),
         '#ApplyOnlineLink': data.source_url
     };
 
     for (const [key, val] of Object.entries(replacements)) template = template.split(key).join(val);
-    await fs.writeFile(path.join(CONFIG.outDir, `${data.slug}.html`), template);
+    
+    const dir = path.join(CONFIG.outDir, catSlug);
+    await fs.mkdir(dir, { recursive: true });
+    await fs.writeFile(path.join(dir, `${data.slug}.html`), template);
 }
 
 function generateTOC(data) {
@@ -493,15 +542,6 @@ function generateJobSchema(data, url) {
                 "@type": "PostalAddress",
                 "addressCountry": "IN"
             }
-        },
-        "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "INR",
-            "value": {
-                "@type": "QuantitativeValue",
-                "value": 40000,
-                "unitText": "MONTH"
-            }
         }
     };
 }
@@ -519,7 +559,7 @@ function generateFAQSchema(data) {
     };
 }
 
-function generateBreadcrumbSchema(data, url) {
+function generateBreadcrumbSchema(data, url, catName, catSlug) {
     return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -533,8 +573,8 @@ function generateBreadcrumbSchema(data, url) {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Latest Jobs",
-                "item": "https://rojgar.site/jobs/latest-jobs.html"
+                "name": catName,
+                "item": `https://rojgar.site/jobs/${catSlug}/`
             },
             {
                 "@type": "ListItem",
@@ -605,9 +645,10 @@ async function generateCategoryPage(catName, catSlug, items) {
     template = template.replace(/\[Category Name\]/g, catName)
                        .replace('<!-- [LIST_ROWS] -->', rows);
                        
-    const fileName = catSlug + '.html';
-    await fs.writeFile(path.join(CONFIG.outDir, fileName), template);
-    console.log(`   📄 Generated Category Page: ${fileName}`);
+    const dir = path.join(CONFIG.outDir, catSlug);
+    await fs.mkdir(dir, { recursive: true });
+    await fs.writeFile(path.join(dir, 'index.html'), template);
+    console.log(`   📄 Generated Category Page: ${catSlug}/index.html`);
 }
 
 async function updateHomepage(db, categories) {
@@ -629,7 +670,14 @@ async function updateHomepage(db, categories) {
 }
 
 function slugify(text) {
-    return text.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '').replace(/--+/g, '-').replace(/^-+/, '').replace(/-+$/, '');
+    if (!text) return 'job-' + Date.now();
+    const slug = text.toString().toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w-]+/g, '')
+        .replace(/--+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
+    return slug || 'job-' + Math.random().toString(36).substring(7);
 }
 
 syncAll();

@@ -1,0 +1,22 @@
+# ROJGAR.SITE
+> India's Leading Portal for Latest Govt Jobs, Exam Results, and Admit Cards 2026.
+
+## About
+ROJGAR.SITE is an authoritative recruitment information portal that scrapes and verifies government job listings from multiple official sources. We provide real-time updates on competitive examinations, answer keys, syllabuses, and recruitment notifications for Indian citizens.
+
+## Key Hubs
+- [Home](https://rojgar.site/index.html): Live recruitment dashboard.
+- [Latest Jobs](https://rojgar.site/jobs/latest-jobs/): Newest government notifications.
+- [Exam Results](https://rojgar.site/jobs/results/): Latest verified recruitment results.
+- [Admit Cards](https://rojgar.site/jobs/admit-card/): Official hall ticket downloads.
+- [Disclaimer](https://rojgar.site/disclaimer.html): Legal information and verification notice.
+
+## Data Philosophy
+We prioritize deep extraction of essential job metadata:
+- Important Dates (Begin, Last, Fee Payment)
+- Application Fees (General, OBC, SC, ST)
+- Vacancy Details (Post Name, Total Vacancies, Eligibility)
+- Official Direct Links
+
+## Automated Synchronization
+The portal syncs live via a deep-scraping engine to ensure that all structured content matches official government releases exactly.
